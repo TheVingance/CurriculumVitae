@@ -89,7 +89,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 ## 🎓 Formação Acadêmica
 
 - **Bacharelado em Ciência da Computação**  
-  *Universidade Tecnológica Federal do Paraná (UTFPR)* — 2022 a 2026 *(Em andamento)*
+  *Universidade Tecnológica Federal do Paraná (UTFPR)* — 2022 a 2026 *(Em fase de conclusão)*
 
 ---
 
