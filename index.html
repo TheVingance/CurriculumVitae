@@ -3,17 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Henrique Triches Iurkiv | Currículo</title>
+  <title>Henrique Triches Iurkiv | Desenvolvedor de Software</title>
+  <meta name="description" content="Currículo Profissional de Henrique Triches Iurkiv - Desenvolvedor de Software, especialista em PL/SQL, Python, TypeScript e graduando em Ciência da Computação (UTFPR)." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Devicon (Ícones oficiais de linguagens e ferramentas) -->
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Font Awesome 6 (Ícones utilitários) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <style>
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --card-border: #334155;
+      --bg-dark: #0b0f19;
+      --card-bg: rgba(17, 24, 39, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover-border: rgba(56, 189, 248, 0.3);
+      --surface-subtle: rgba(255, 255, 255, 0.03);
+      
       --text-main: #f8fafc;
+      --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-hover: #0284c7;
-      --tag-bg: #0f172a;
+      
+      --accent-cyan: #38bdf8;
+      --accent-cyan-hover: #0ea5e9;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.2);
+      --accent-indigo: #818cf8;
+      --accent-emerald: #10b981;
+      --accent-purple: #c084fc;
+      
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
     }
 
     * {
@@ -23,331 +53,1062 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
+      font-family: var(--font-sans);
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 90% 40%, rgba(129, 140, 248, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+      background-attachment: fixed;
       color: var(--text-main);
       line-height: 1.6;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
     }
 
     .container {
-      max-width: 860px;
+      max-width: 900px;
       width: 100%;
       background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
     }
 
+    /* Linha sutil de brilho superior */
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+    }
+
+    /* HEADER */
     header {
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #34d399;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .status-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-emerald);
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
 
     h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--text-main);
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
-      font-size: 1.15rem;
-      color: var(--accent);
-      margin-top: 0.25rem;
+      font-size: 1.25rem;
+      color: var(--accent-cyan);
+      margin-top: 0.4rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .subtitle-tag {
+      font-size: 0.85rem;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent-cyan);
+      padding: 0.15rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
       font-weight: 500;
     }
 
     .contact-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem 1.5rem;
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      color: var(--text-muted);
+      gap: 0.75rem 1.25rem;
+      margin-top: 1.5rem;
+      font-size: 0.92rem;
     }
 
-    .contact-bar a {
-      color: var(--text-muted);
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      background: var(--surface-subtle);
+      border: 1px solid var(--card-border);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm);
       text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .contact-item i {
+      color: var(--accent-cyan);
+      font-size: 0.95rem;
+    }
+
+    .contact-item:hover {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.3);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 2px 4px;
+      font-size: 0.8rem;
       transition: color 0.2s;
     }
 
-    .contact-bar a:hover {
-      color: var(--accent);
+    .copy-btn:hover {
+      color: var(--accent-cyan);
     }
 
     .actions {
-      margin-top: 1.5rem;
+      margin-top: 1.75rem;
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background-color: var(--accent);
-      color: #0f172a;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      gap: 0.6rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-sm);
       font-weight: 600;
+      font-size: 0.95rem;
       text-decoration: none;
-      transition: background 0.2s, transform 0.1s;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
     }
 
-    .btn:hover {
-      background-color: var(--accent-hover);
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-cyan), #0284c7);
+      color: #0b0f19;
+      box-shadow: 0 4px 15px var(--accent-cyan-glow);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #7dd3fc, var(--accent-cyan));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+      color: #0b0f19;
+    }
+
+    .btn-secondary {
+      background: var(--surface-subtle);
+      border-color: var(--card-border);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
       color: #fff;
+      transform: translateY(-2px);
     }
 
+    /* SECTIONS */
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.75rem;
     }
 
-    h2 {
-      font-size: 1.25rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent);
-      border-bottom: 2px solid var(--card-border);
-      padding-bottom: 0.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .item {
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-main);
       margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--card-border);
+      position: relative;
+    }
+
+    .section-title i {
+      color: var(--accent-cyan);
+      font-size: 1.2rem;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 48px;
+      height: 2px;
+      background: var(--accent-cyan);
+      border-radius: 2px;
+    }
+
+    p.lead {
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    /* CARDS & TIMELINE */
+    .timeline {
+      position: relative;
+      border-left: 2px solid rgba(56, 189, 248, 0.2);
+      margin-left: 0.5rem;
+      padding-left: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.35rem;
+      top: 0.25rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg-dark);
+      border: 3px solid var(--accent-cyan);
+      transition: all 0.2s ease;
+    }
+
+    .timeline-item:hover .timeline-dot {
+      background: var(--accent-cyan);
+      box-shadow: 0 0 10px var(--accent-cyan);
+    }
+
+    .card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      border-color: var(--card-hover-border);
+      background: rgba(255, 255, 255, 0.04);
+      transform: translateY(-2px);
     }
 
     .item-header {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       flex-wrap: wrap;
       gap: 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .item-title {
-      font-weight: 600;
-      font-size: 1.05rem;
+      font-weight: 700;
+      font-size: 1.15rem;
       color: var(--text-main);
     }
 
     .item-role {
-      color: var(--accent);
+      color: var(--accent-cyan);
+      font-weight: 600;
       font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.15rem;
+    }
+
+    .badge-current {
+      font-size: 0.75rem;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.1rem 0.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
     }
 
     .item-date {
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
+      font-family: var(--font-mono);
+      background: rgba(0, 0, 0, 0.25);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    p, ul {
-      color: var(--text-muted);
+    .card-desc {
+      color: var(--text-secondary);
       font-size: 0.95rem;
-      margin-top: 0.35rem;
-    }
-
-    ul {
-      list-style-position: inside;
-    }
-
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      line-height: 1.6;
       margin-top: 0.5rem;
     }
 
-    .skill-tag {
-      background: var(--tag-bg);
-      border: 1px solid var(--card-border);
-      color: var(--text-main);
-      padding: 0.35rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.85rem;
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
     }
 
-    .courses-list {
+    .tech-pill {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    /* PROJETOS GRID */
+    .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 0.75rem;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
     }
 
-    .course-item {
-      background: var(--tag-bg);
+    /* SKILLS CATEGORIZADAS */
+    .skills-category {
+      margin-bottom: 1.5rem;
+    }
+
+    .skills-category-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    .skills-category-title i {
+      color: var(--accent-cyan);
+    }
+
+    .skills-cluster {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .skill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(15, 23, 42, 0.8);
       border: 1px solid var(--card-border);
-      padding: 0.75rem;
-      border-radius: 6px;
+      color: var(--text-main);
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm);
       font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-sm);
     }
 
-    .course-name {
+    .skill-badge i {
+      font-size: 1.15rem;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    .skill-badge:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+      color: #fff;
+    }
+
+    .skill-badge:hover i {
+      transform: scale(1.15);
+    }
+
+    /* CURSOS & CERTIFICAÇÕES */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 1rem;
+    }
+
+    .course-card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: all 0.25s ease;
+    }
+
+    .course-card:hover {
+      border-color: var(--card-hover-border);
+      background: rgba(255, 255, 255, 0.04);
+      transform: translateY(-2px);
+    }
+
+    .course-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .course-info {
+      flex: 1;
+    }
+
+    .course-title {
+      font-weight: 600;
       color: var(--text-main);
-      font-weight: 500;
+      font-size: 0.95rem;
+      line-height: 1.35;
     }
 
     .course-meta {
       color: var(--text-muted);
-      font-size: 0.8rem;
+      font-size: 0.82rem;
+      margin-top: 0.35rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
     }
 
-    @media (max-width: 640px) {
+    .course-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* TOAST NOTIFICATION */
+    #toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #1e293b;
+      border: 1px solid var(--accent-cyan);
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    #toast.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
       .container {
-        padding: 1.5rem;
+        padding: 1.75rem 1.25rem;
+        border-radius: var(--radius-md);
       }
       h1 {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
+      }
+      .courses-grid {
+        grid-template-columns: 1fr;
+      }
+      .timeline {
+        padding-left: 1.25rem;
+      }
+      .timeline-dot {
+        left: -1.85rem;
       }
       .actions {
         flex-direction: column;
+      }
+      .btn {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    /* ESTILOS PARA IMPRESSÃO / SALVAR EM PDF (Ctrl+P) */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+        padding: 0 !important;
+      }
+      .container {
+        background: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .actions, .status-badge, .copy-btn, #toast, footer {
+        display: none !important;
+      }
+      h1 {
+        color: #0f172a !important;
+        -webkit-text-fill-color: initial !important;
+        font-size: 2rem !important;
+      }
+      .subtitle {
+        color: #0284c7 !important;
+      }
+      .contact-item {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #334155 !important;
+      }
+      .section-title {
+        color: #0f172a !important;
+        border-bottom: 2px solid #0284c7 !important;
+      }
+      .section-title::after {
+        display: none !important;
+      }
+      .card, .course-card {
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .skill-badge {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      .item-title, .course-title {
+        color: #0f172a !important;
+      }
+      p, .card-desc, .course-meta {
+        color: #475569 !important;
+      }
+      .timeline {
+        border-left-color: #cbd5e1 !important;
+      }
+      .timeline-dot {
+        border-color: #0284c7 !important;
+        background: #ffffff !important;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
+    <!-- CABEÇALHO -->
     <header>
-      <h1>Henrique Triches Iurkiv</h1>
-      <div class="subtitle">Desenvolvedor de Software</div>
-      <div class="contact-bar">
-        <span>📍 Cascavel / Medianeira - PR</span>
-        <span>📞 <a href="tel:+5545999434345">(45) 99943-4345</a></span>
-        <span>✉️ <a href="mailto:htriches@hotmail.com">htriches@hotmail.com</a></span>
-        <span>🐙 <a href="https://github.com/thevingance" target="_blank" rel="noopener">github.com/thevingance</a></span>
+      <div class="header-top">
+        <div>
+          <div class="status-badge">
+            <span class="status-pulse"></span>
+            Disponível para novos desafios e projetos
+          </div>
+          <h1>Henrique Triches Iurkiv</h1>
+          <div class="subtitle">
+            Desenvolvedor de Software
+            <span class="subtitle-tag"><i class="fa-solid fa-graduation-cap"></i> UTFPR Ciência da Computação</span>
+          </div>
+        </div>
       </div>
+
+      <div class="contact-bar">
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Cascavel / Medianeira - PR</span>
+        </div>
+        
+        <div class="contact-item" onclick="copyToClipboard('htriches@hotmail.com', 'E-mail')">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:htriches@hotmail.com" style="color: inherit; text-decoration: none;">htriches@hotmail.com</a>
+          <button class="copy-btn" title="Copiar E-mail"><i class="fa-regular fa-copy"></i></button>
+        </div>
+
+        <div class="contact-item" onclick="copyToClipboard('(45) 99943-4345', 'Telefone')">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+5545999434345" style="color: inherit; text-decoration: none;">(45) 99943-4345</a>
+          <button class="copy-btn" title="Copiar Telefone"><i class="fa-regular fa-copy"></i></button>
+        </div>
+
+        <a class="contact-item" href="https://github.com/thevingance" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+          <span>github.com/thevingance</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--text-muted);"></i>
+        </a>
+      </div>
+
       <div class="actions">
-        <!-- O link abaixo aponta para o PDF dentro do mesmo repositório -->
-        <a href="curriculo.pdf" download="CurriculumVitae - Henrique Triches Iurkiv.pdf" class="btn">
-          📥 Baixar Versão em PDF
+        <!-- Baixar PDF Oficial do Repositório -->
+        <a href="curriculo.pdf" download="CurriculumVitae - Henrique Triches Iurkiv.pdf" class="btn btn-primary" id="downloadPdfBtn">
+          <i class="fa-solid fa-file-arrow-down"></i> Baixar Versão em PDF
+        </a>
+        
+        <!-- Botão de Impressão Direta (Otimizado via CSS Print) -->
+        <button onclick="window.print()" class="btn btn-secondary">
+          <i class="fa-solid fa-print"></i> Imprimir / Salvar A4
+        </button>
+
+        <a href="https://github.com/TheVingance/CurriculumVitae" target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fa-brands fa-github"></i> Repositório GitHub
         </a>
       </div>
     </header>
 
+    <!-- OBJETIVOS -->
     <section>
-      <h2>Objetivos</h2>
-      <p>
-        Impulsionar a eficiência e a qualidade das soluções tecnológicas da empresa, desenvolvendo sistemas escaláveis e resolvendo problemas complexos com foco em engenharia de software, boas práticas de programação, alta adaptabilidade e organização técnica.
+      <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> Objetivos</h2>
+      <p class="lead">
+        Impulsionar a eficiência e a qualidade das soluções tecnológicas da organização, projetando sistemas escaláveis e resolvendo problemas complexos de alta volumetria. Combino sólida fundamentação em engenharia de software e modelagem de dados a boas práticas de desenvolvimento, facilidade de adaptação a novos ecossistemas e espírito colaborativo.
       </p>
     </section>
 
+    <!-- HABILIDADES TÉCNICAS (COM ÍCONES OFICIAIS) -->
     <section>
-      <h2>Experiência Profissional</h2>
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <div class="item-title">Frimesa Cooperativa Central</div>
-            <div class="item-role">Desenvolvedor PL/SQL</div>
-          </div>
-          <div class="item-date">Atual</div>
+      <h2 class="section-title"><i class="fa-solid fa-code"></i> Habilidades Técnicas</h2>
+
+      <!-- Categoria 1: Linguagens & Back-end -->
+      <div class="skills-category">
+        <div class="skills-category-title"><i class="fa-solid fa-server"></i> Linguagens & Back-end</div>
+        <div class="skills-cluster">
+          <div class="skill-badge"><i class="devicon-oracle-original colored"></i> PL/SQL (Oracle)</div>
+          <div class="skill-badge"><i class="devicon-python-plain colored"></i> Python</div>
+          <div class="skill-badge"><i class="devicon-fastapi-plain colored"></i> FastAPI</div>
+          <div class="skill-badge"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+          <div class="skill-badge"><i class="devicon-typescript-plain colored"></i> TypeScript</div>
+          <div class="skill-badge"><i class="devicon-java-plain colored"></i> Java (POO)</div>
+          <div class="skill-badge"><i class="devicon-csharp-plain colored"></i> C#</div>
+          <div class="skill-badge"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
         </div>
-        <p>
-          Desenvolvimento, otimização e manutenção de rotinas em banco de dados Oracle (packages, procedures, funções e triggers). Criação de consultas complexas, automação de regras de negócio e suporte a sistemas corporativos de alta demanda.
-        </p>
       </div>
 
-      <div class="item">
-        <div class="item-header">
-          <div>
-            <div class="item-title">BIT - Empresa Júnior de Computação (Unioeste)</div>
-            <div class="item-role">Desenvolvedor de Software (400h)</div>
-          </div>
-          <div class="item-date">2019 – 2020</div>
+      <!-- Categoria 2: Bancos de Dados & Modelagem -->
+      <div class="skills-category">
+        <div class="skills-category-title"><i class="fa-solid fa-database"></i> Bancos de Dados & SQL</div>
+        <div class="skills-cluster">
+          <div class="skill-badge"><i class="devicon-oracle-original colored"></i> Oracle Database</div>
+          <div class="skill-badge"><i class="fa-solid fa-database" style="color: #38bdf8;"></i> SQL Avançado & Tuning</div>
+          <div class="skill-badge"><i class="fa-solid fa-table-cells" style="color: #818cf8;"></i> Modelagem Relacional</div>
+          <div class="skill-badge"><i class="fa-solid fa-bolt" style="color: #facc15;"></i> Packages, Procedures & Triggers</div>
         </div>
-        <p>
-          Desenvolvimento de projetos e soluções sob tutoria acadêmica. Atuação prática em equipe no levantamento de requisitos, implementação de regras de negócio e versionamento de código com Git.
-        </p>
+      </div>
+
+      <!-- Categoria 3: Front-end -->
+      <div class="skills-category">
+        <div class="skills-category-title"><i class="fa-solid fa-laptop-code"></i> Front-end & Web</div>
+        <div class="skills-cluster">
+          <div class="skill-badge"><i class="devicon-react-original colored"></i> React</div>
+          <div class="skill-badge"><i class="devicon-html5-plain colored"></i> HTML5</div>
+          <div class="skill-badge"><i class="devicon-css3-plain colored"></i> CSS3 Moderno</div>
+        </div>
+      </div>
+
+      <!-- Categoria 4: Segurança & Inteligência Artificial -->
+      <div class="skills-category">
+        <div class="skills-category-title"><i class="fa-solid fa-shield-halved"></i> Segurança da Informação & IA</div>
+        <div class="skills-cluster">
+          <div class="skill-badge"><i class="fa-solid fa-brain" style="color: #ec4899;"></i> Segurança em IA & Prompt Injection</div>
+          <div class="skill-badge"><i class="fa-solid fa-robot" style="color: #c084fc;"></i> Benchmarking de 9 LLMs</div>
+          <div class="skill-badge"><i class="fa-solid fa-user-secret" style="color: #f59e0b;"></i> Ethical Hacking Prático</div>
+          <div class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #34d399;"></i> Cibersegurança & Redes</div>
+        </div>
+      </div>
+
+      <!-- Categoria 5: Engenharia, Arquitetura & Telemetria -->
+      <div class="skills-category">
+        <div class="skills-category-title"><i class="fa-solid fa-cubes"></i> Arquitetura & Ferramentas</div>
+        <div class="skills-cluster">
+          <div class="skill-badge"><i class="fa-solid fa-layer-group" style="color: #38bdf8;"></i> Clean Architecture & DDD</div>
+          <div class="skill-badge"><i class="devicon-git-plain colored"></i> Git</div>
+          <div class="skill-badge"><i class="devicon-github-original"></i> GitHub</div>
+          <div class="skill-badge"><i class="fa-solid fa-microchip" style="color: #06b6d4;"></i> Telemetria & Automação Industrial</div>
+        </div>
       </div>
     </section>
 
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
     <section>
-      <h2>Projetos & Pesquisa</h2>
-      <div class="item">
-        <div class="item-header">
-          <div class="item-title">Sistema de Monitoramento Térmico Industrial – NINFA</div>
-          <div class="item-date">Extensão UTFPR</div>
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experiência Profissional</h2>
+      
+      <div class="timeline">
+        <!-- Experiência 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <div class="item-header">
+              <div>
+                <div class="item-title">Frimesa Cooperativa Central</div>
+                <div class="item-role">
+                  Desenvolvedor PL/SQL
+                  <span class="badge-current">🟢 Atual</span>
+                </div>
+              </div>
+              <div class="item-date">2023 – Presente</div>
+            </div>
+            <p class="card-desc">
+              Desenvolvimento, otimização e manutenção de rotinas em banco de dados Oracle de missão crítica corporativa. Criação e refatoração de packages, stored procedures, funções e triggers de alta performance. Construção de consultas complexas, automação de regras de negócio de alta criticidade e suporte especializado a sistemas integrados de alta demanda.
+            </p>
+            <div class="card-tags">
+              <span class="tech-pill">Oracle DB</span>
+              <span class="tech-pill">PL/SQL</span>
+              <span class="tech-pill">Query Tuning</span>
+              <span class="tech-pill">Packages & Procedures</span>
+              <span class="tech-pill">Sistemas Críticos</span>
+            </div>
+          </div>
         </div>
-        <p>Desenvolvimento de solução para aquisição, processamento e telemetria de dados térmicos em tempo real para ambientes industriais.</p>
-      </div>
 
-      <div class="item">
-        <div class="item-header">
-          <div class="item-title">Projeto Celilac – Segurança Alimentar</div>
-          <div class="item-date">Extensão UTFPR</div>
+        <!-- Experiência 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <div class="item-header">
+              <div>
+                <div class="item-title">BIT – Empresa Júnior de Computação (Unioeste)</div>
+                <div class="item-role">Desenvolvedor de Software (400h)</div>
+              </div>
+              <div class="item-date">2019 – 2020</div>
+            </div>
+            <p class="card-desc">
+              Desenvolvimento de projetos e soluções de software sob tutoria acadêmica especializada (Prof. Me. Luiz Antonio Rodrigues e Prof. Me. Ivonei Freitas da Silva). Atuação prática em equipes multidisciplinares com levantamento de requisitos, arquitetura de sistemas, implementação de rotinas de código e controle de versão rigoroso via Git.
+            </p>
+            <div class="card-tags">
+              <span class="tech-pill">Desenvolvimento de Software</span>
+              <span class="tech-pill">Engenharia de Requisitos</span>
+              <span class="tech-pill">Git / Versionamento</span>
+              <span class="tech-pill">Metodologias Ágeis</span>
+            </div>
+          </div>
         </div>
-        <p>Plataforma para auxílio a celíacos com detecção de alérgenos e riscos de contaminação cruzada. Back-end desenvolvido em Node.js e TypeScript utilizando Clean Architecture e DDD.</p>
-      </div>
-
-      <div class="item">
-        <div class="item-header">
-          <div class="item-title">TCC: Segurança em Inteligência Artificial</div>
-          <div class="item-date">Pesquisa Acadêmica</div>
-        </div>
-        <p>Avaliação empírica de vulnerabilidade contra ataques de prompt injection em 9 LLMs através de um framework experimental desenvolvido em Python e FastAPI.</p>
       </div>
     </section>
 
+    <!-- PROJETOS & PESQUISA -->
     <section>
-      <h2>Formação Acadêmica</h2>
-      <div class="item">
+      <h2 class="section-title"><i class="fa-solid fa-flask"></i> Projetos & Pesquisa Acadêmica</h2>
+      <div class="projects-grid">
+        
+        <!-- TCC -->
+        <div class="card">
+          <div class="item-header">
+            <div>
+              <div class="item-title">TCC: Segurança em Inteligência Artificial</div>
+              <div class="item-role">Pesquisa Acadêmica / Desenvolvedor</div>
+            </div>
+            <div class="item-date">UTFPR • 2024</div>
+          </div>
+          <p class="card-desc">
+            Construção de uma arquitetura experimental em Python e FastAPI voltada à avaliação empírica de vulnerabilidade contra ataques de <em>prompt injection</em> em 9 modelos de linguagem (LLMs). Análise de vetores de exploração, testes de robustez adversarial e proposição de diretrizes para mitigação em sistemas autônomos.
+          </p>
+          <div class="card-tags">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">Prompt Injection</span>
+            <span class="tech-pill">LLMs Security</span>
+            <span class="tech-pill">Pesquisa Experimental</span>
+          </div>
+        </div>
+
+        <!-- Projeto Celilac -->
+        <div class="card">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Projeto Celilac – Segurança Alimentar</div>
+              <div class="item-role">Desenvolvedor Full-stack Voluntário</div>
+            </div>
+            <div class="item-date">Extensão UTFPR</div>
+          </div>
+          <p class="card-desc">
+            Plataforma inovadora de apoio à comunidade celíaca focada na detecção de alérgenos e prevenção de riscos de contaminação cruzada. Desenvolvimento do ecossistema back-end com Node.js e TypeScript, estruturado sob os princípios de <em>Clean Architecture</em> e <em>Domain-Driven Design (DDD)</em> para garantia de escalabilidade e testabilidade.
+          </p>
+          <div class="card-tags">
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">Clean Architecture</span>
+            <span class="tech-pill">Domain-Driven Design (DDD)</span>
+            <span class="tech-pill">APIs RESTful</span>
+          </div>
+        </div>
+
+        <!-- Projeto NINFA -->
+        <div class="card">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Sistema de Monitoramento Térmico Industrial – NINFA</div>
+              <div class="item-role">Desenvolvedor de Software</div>
+            </div>
+            <div class="item-date">Extensão UTFPR</div>
+          </div>
+          <p class="card-desc">
+            Desenvolvimento de solução robusta para aquisição, filtragem, processamento e telemetria de medições térmicas em tempo real, concebida para atender os rígidos requisitos de ambientes operacionais industriais.
+          </p>
+          <div class="card-tags">
+            <span class="tech-pill">Telemetria em Tempo Real</span>
+            <span class="tech-pill">Automação Industrial</span>
+            <span class="tech-pill">Sistemas Embarcados / IoT</span>
+            <span class="tech-pill">Processamento de Dados</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO ACADÊMICA -->
+    <section>
+      <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Formação Acadêmica</h2>
+      <div class="card">
         <div class="item-header">
-          <div class="item-title">Bacharelado em Ciência da Computação</div>
+          <div>
+            <div class="item-title">Universidade Tecnológica Federal do Paraná (UTFPR)</div>
+            <div class="item-role">Bacharelado em Ciência da Computação</div>
+          </div>
           <div class="item-date">2022 – 2026 (Em andamento)</div>
         </div>
-        <p>Universidade Tecnológica Federal do Paraná (UTFPR)</p>
+        <p class="card-desc">
+          Formação sólida abrangendo Algoritmos Avançados, Estruturas de Dados, Engenharia de Software, Sistemas Operacionais, Redes de Computadores, Bancos de Dados e Segurança da Informação.
+        </p>
       </div>
     </section>
 
+    <!-- CURSOS & CERTIFICAÇÕES -->
     <section>
-      <h2>Habilidades Técnicas</h2>
-      <div class="skills-grid">
-        <span class="skill-tag">PL/SQL (Oracle)</span>
-        <span class="skill-tag">Python / FastAPI</span>
-        <span class="skill-tag">Node.js & TypeScript</span>
-        <span class="skill-tag">Clean Architecture & DDD</span>
-        <span class="skill-tag">Java (POO)</span>
-        <span class="skill-tag">C#</span>
-        <span class="skill-tag">SQL & Modelagem de Dados</span>
-        <span class="skill-tag">React / JavaScript</span>
-        <span class="skill-tag">Git / GitHub</span>
-        <span class="skill-tag">Segurança em IA & LLMs</span>
-        <span class="skill-tag">Telemetria & Automação</span>
-        <span class="skill-tag">Cibersegurança & Redes</span>
+      <h2 class="section-title"><i class="fa-solid fa-award"></i> Cursos & Certificações</h2>
+      <div class="courses-grid">
+        
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-database"></i></div>
+          <div class="course-info">
+            <div class="course-title">Banco de Dados: Oracle PL/SQL</div>
+            <div class="course-meta">
+              <span>IFRS (Inst. Federal do RS)</span>
+              <span>•</span>
+              <span class="course-badge">20h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="course-info">
+            <div class="course-title">Nivelamento – Formação em Cibersegurança</div>
+            <div class="course-meta">
+              <span>Hackers do Bem / SENAI SP</span>
+              <span>•</span>
+              <span class="course-badge">80h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="devicon-python-plain"></i></div>
+          <div class="course-info">
+            <div class="course-title">Python 3 do Básico ao Avançado com Projetos</div>
+            <div class="course-meta">
+              <span>Udemy</span>
+              <span>•</span>
+              <span class="course-badge">141,5h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="devicon-java-plain"></i></div>
+          <div class="course-info">
+            <div class="course-title">Java COMPLETO: POO + Projetos</div>
+            <div class="course-meta">
+              <span>Udemy (Prof. Nelio Alves)</span>
+              <span>•</span>
+              <span class="course-badge">54h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <div class="course-info">
+            <div class="course-title">Arquitetura de Redes</div>
+            <div class="course-meta">
+              <span>Udemy (Prof. Gabriel Torres)</span>
+              <span>•</span>
+              <span class="course-badge">26,5h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-user-shield"></i></div>
+          <div class="course-info">
+            <div class="course-title">Fundamentos de Ethical Hacking Prático</div>
+            <div class="course-meta">
+              <span>Udemy</span>
+              <span>•</span>
+              <span class="course-badge">24,5h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section>
-      <h2>Cursos & Certificações</h2>
-      <div class="courses-list">
-        <div class="course-item">
-          <div class="course-name">Banco de Dados: Oracle PL/SQL</div>
-          <div class="course-meta">IFRS (Inst. Fed. do Rio Grande do Sul) • 20h (2026)</div>
-        </div>
-        <div class="course-item">
-          <div class="course-name">Nivelamento - Formação em Cibersegurança</div>
-          <div class="course-meta">Hackers do Bem / SENAI SP • 80h (2026)</div>
-        </div>
-        <div class="course-item">
-          <div class="course-name">Python 3 do Básico ao Avançado com Projetos</div>
-          <div class="course-meta">Udemy • 141,5h (2026)</div>
-        </div>
-        <div class="course-item">
-          <div class="course-name">Java COMPLETO: POO + Projetos</div>
-          <div class="course-meta">Udemy (Nelio Alves) • 54h (2026)</div>
-        </div>
-        <div class="course-item">
-          <div class="course-name">Arquitetura de Redes</div>
-          <div class="course-meta">Udemy (Gabriel Torres) • 26,5h (2026)</div>
-        </div>
-        <div class="course-item">
-          <div class="course-name">Fundamentos de Ethical Hacking Prático</div>
-          <div class="course-meta">Udemy • 24,5h (2026)</div>
-        </div>
+    <!-- RODAPÉ -->
+    <footer>
+      <div>
+        Henrique Triches Iurkiv • Desenvolvedor de Software
       </div>
-    </section>
+      <div>
+        <a href="https://github.com/TheVingance/CurriculumVitae" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i> github.com/TheVingance/CurriculumVitae
+        </a>
+      </div>
+    </footer>
   </div>
+
+  <!-- TOAST DE FEEDBACK AO COPIAR -->
+  <div id="toast">
+    <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i>
+    <span id="toast-msg">Copiado com sucesso!</span>
+  </div>
+
+  <script>
+    function copyToClipboard(text, label) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => showToast(label + ' copiado para a área de transferência!'));
+      } else {
+        const input = document.createElement('input');
+        input.value = text;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        showToast(label + ' copiado para a área de transferência!');
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toast-msg');
+      msg.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <script>
+    // Se o usuário acessar /curriculumvitae em minúsculas ou sem barra, redireciona para a rota correta do GitHub Pages
+    const path = window.location.pathname;
+    if (path.toLowerCase().includes('/curriculumvitae')) {
+      window.location.replace(window.location.origin + '/CurriculumVitae/' + window.location.search + window.location.hash);
+    } else {
+      window.location.replace('/CurriculumVitae/');
+    }
+  </script>
+  <meta http-equiv="refresh" content="0; url=/CurriculumVitae/">
+</head>
+<body style="font-family: sans-serif; background: #0b0f19; color: #f8fafc; text-align: center; padding-top: 20vh;">
+  <h2>Redirecionando para o Currículo...</h2>
+  <p><a href="/CurriculumVitae/" style="color: #38bdf8;">Clique aqui caso não seja redirecionado automaticamente.</a></p>
+</body>
+</html>
