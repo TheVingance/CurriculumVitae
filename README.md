@@ -29,7 +29,7 @@
   </p>
 
   <p>
-    📍 Cascavel / Medianeira - PR &nbsp;|&nbsp; 
+    📍 Medianeira - PR &nbsp;|&nbsp; 
     ✉️ <a href="mailto:htriches@hotmail.com">htriches@hotmail.com</a> &nbsp;|&nbsp; 
     📱 <a href="tel:+5545999434345">(45) 99943-4345</a> &nbsp;|&nbsp; 
     🐙 <a href="https://github.com/thevingance">github.com/thevingance</a>
@@ -63,7 +63,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 ## 💼 Experiência Profissional
 
 ### 🔹 Frimesa Cooperativa Central
-**Desenvolvedor PL/SQL** | *Período: Atual*
+**Desenvolvedor PL/SQL** | *Período: 2026 – Presente (Atual)*
 - Desenvolvimento, otimização e manutenção de rotinas de banco de dados Oracle corporativo de missão crítica.
 - Implementação de packages, procedures, funções e triggers com alta performance.
 - Análise e criação de consultas complexas, automação de regras de negócio e suporte a sistemas integrados de alta demanda.
@@ -77,7 +77,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 
 ## 🔬 Projetos & Pesquisa Acadêmica
 
-- **TCC: Segurança em Inteligência Artificial** *(Pesquisa Acadêmica)*  
+- **TCC: Segurança em Inteligência Artificial** *(Pesquisa Acadêmica • UTFPR • 2026)*  
   Framework experimental desenvolvido em Python e FastAPI para avaliação empírica de vulnerabilidade contra ataques de *prompt injection* testado em 9 modelos de linguagem (LLMs).
 - **Sistema de Monitoramento Térmico Industrial – NINFA** *(Projeto de Extensão UTFPR)*  
   Desenvolvimento de solução para aquisição, processamento e telemetria de dados térmicos em tempo real para controle operacional em ambientes industriais.
