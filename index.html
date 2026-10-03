@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henrique Triches Iurkiv | Currículo</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --tag-bg: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 860px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--accent);
+      margin-top: 0.25rem;
+      font-weight: 500;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .contact-bar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-bar a:hover {
+      color: var(--accent);
+    }
+
+    .actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+      color: #fff;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      border-bottom: 2px solid var(--card-border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .item {
+      margin-bottom: 1.25rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .item-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text-main);
+    }
+
+    .item-role {
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+
+    .item-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    p, ul {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 0.35rem;
+    }
+
+    ul {
+      list-style-position: inside;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+    }
+
+    .courses-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .course-item {
+      background: var(--tag-bg);
+      border: 1px solid var(--card-border);
+      padding: 0.75rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .course-name {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .course-meta {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+      .actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Henrique Triches Iurkiv</h1>
+      <div class="subtitle">Desenvolvedor de Software</div>
+      <div class="contact-bar">
+        <span>📍 Cascavel / Medianeira - PR</span>
+        <span>📞 <a href="tel:+5545999434345">(45) 99943-4345</a></span>
+        <span>✉️ <a href="mailto:htriches@hotmail.com">htriches@hotmail.com</a></span>
+        <span>🐙 <a href="https://github.com/thevingance" target="_blank" rel="noopener">github.com/thevingance</a></span>
+      </div>
+      <div class="actions">
+        <!-- O link abaixo aponta para o PDF dentro do mesmo repositório -->
+        <a href="curriculo.pdf" download class="btn">
+          📥 Baixar Versão em PDF
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Objetivos</h2>
+      <p>
+        Impulsionar a eficiência e a qualidade das soluções tecnológicas da empresa, desenvolvendo sistemas escaláveis e resolvendo problemas complexos com foco em engenharia de software, boas práticas de programação, alta adaptabilidade e organização técnica.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experiência Profissional</h2>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">Frimesa Cooperativa Central</div>
+            <div class="item-role">Desenvolvedor PL/SQL</div>
+          </div>
+          <div class="item-date">Atual</div>
+        </div>
+        <p>
+          Desenvolvimento, otimização e manutenção de rotinas em banco de dados Oracle (packages, procedures, funções e triggers). Criação de consultas complexas, automação de regras de negócio e suporte a sistemas corporativos de alta demanda.
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <div class="item-title">BIT - Empresa Júnior de Computação (Unioeste)</div>
+            <div class="item-role">Desenvolvedor de Software (400h)</div>
+          </div>
+          <div class="item-date">2019 – 2020</div>
+        </div>
+        <p>
+          Desenvolvimento de projetos e soluções sob tutoria acadêmica. Atuação prática em equipe no levantamento de requisitos, implementação de regras de negócio e versionamento de código com Git.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projetos & Pesquisa</h2>
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">Sistema de Monitoramento Térmico Industrial – NINFA</div>
+          <div class="item-date">Extensão UTFPR</div>
+        </div>
+        <p>Desenvolvimento de solução para aquisição, processamento e telemetria de dados térmicos em tempo real para ambientes industriais.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">Projeto Celilac – Segurança Alimentar</div>
+          <div class="item-date">Extensão UTFPR</div>
+        </div>
+        <p>Plataforma para auxílio a celíacos com detecção de alérgenos e riscos de contaminação cruzada. Back-end desenvolvido em Node.js e TypeScript utilizando Clean Architecture e DDD.</p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">TCC: Segurança em Inteligência Artificial</div>
+          <div class="item-date">Pesquisa Acadêmica</div>
+        </div>
+        <p>Avaliação empírica de vulnerabilidade contra ataques de prompt injection em 9 LLMs através de um framework experimental desenvolvido em Python e FastAPI.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formação Acadêmica</h2>
+      <div class="item">
+        <div class="item-header">
+          <div class="item-title">Bacharelado em Ciência da Computação</div>
+          <div class="item-date">2022 – 2026 (Em andamento)</div>
+        </div>
+        <p>Universidade Tecnológica Federal do Paraná (UTFPR)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <span class="skill-tag">PL/SQL (Oracle)</span>
+        <span class="skill-tag">Python / FastAPI</span>
+        <span class="skill-tag">Node.js & TypeScript</span>
+        <span class="skill-tag">Clean Architecture & DDD</span>
+        <span class="skill-tag">Java (POO)</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">SQL & Modelagem de Dados</span>
+        <span class="skill-tag">React / JavaScript</span>
+        <span class="skill-tag">Git / GitHub</span>
+        <span class="skill-tag">Segurança em IA & LLMs</span>
+        <span class="skill-tag">Telemetria & Automação</span>
+        <span class="skill-tag">Cibersegurança & Redes</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cursos & Certificações</h2>
+      <div class="courses-list">
+        <div class="course-item">
+          <div class="course-name">Banco de Dados: Oracle PL/SQL</div>
+          <div class="course-meta">IFRS (Inst. Fed. do Rio Grande do Sul) • 20h (2026)</div>
+        </div>
+        <div class="course-item">
+          <div class="course-name">Nivelamento - Formação em Cibersegurança</div>
+          <div class="course-meta">Hackers do Bem / SENAI SP • 80h (2026)</div>
+        </div>
+        <div class="course-item">
+          <div class="course-name">Python 3 do Básico ao Avançado com Projetos</div>
+          <div class="course-meta">Udemy • 141,5h (2026)</div>
+        </div>
+        <div class="course-item">
+          <div class="course-name">Java COMPLETO: POO + Projetos</div>
+          <div class="course-meta">Udemy (Nelio Alves) • 54h (2026)</div>
+        </div>
+        <div class="course-item">
+          <div class="course-name">Arquitetura de Redes</div>
+          <div class="course-meta">Udemy (Gabriel Torres) • 26,5h (2026)</div>
+        </div>
+        <div class="course-item">
+          <div class="course-name">Fundamentos de Ethical Hacking Prático</div>
+          <div class="course-meta">Udemy • 24,5h (2026)</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
