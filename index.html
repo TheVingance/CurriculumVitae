@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Henrique Triches Iurkiv | Desenvolvedor de Software</title>
   <meta name="description" content="Currículo Profissional de Henrique Triches Iurkiv - Desenvolvedor de Software, especialista em PL/SQL, Python, TypeScript e graduando em Ciência da Computação (UTFPR)." />
 
-  <!-- Script para carregar tema salvo imediatamente sem flash de tela branca/preta -->
+  <!-- Script para carregar tema padrão claro ou preferência salva sem flash -->
   <script>
     (function() {
       const savedTheme = localStorage.getItem('cv_theme');
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
       } else {
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'dark');
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     })();
   </script>
@@ -42,53 +41,8 @@
       --transition-speed: 0.3s;
     }
 
-    /* TEMA ESCURO (PADRÃO) */
-    :root, [data-theme="dark"] {
-      --bg-page: #0b0f19;
-      --bg-gradient-1: rgba(56, 189, 248, 0.12);
-      --bg-gradient-2: rgba(129, 140, 248, 0.08);
-      --bg-gradient-3: rgba(16, 185, 129, 0.05);
-
-      --card-bg: rgba(17, 24, 39, 0.8);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --card-hover-border: rgba(56, 189, 248, 0.35);
-      --surface-subtle: rgba(255, 255, 255, 0.03);
-      --surface-hover: rgba(255, 255, 255, 0.06);
-
-      --text-main: #f8fafc;
-      --text-secondary: #cbd5e1;
-      --text-muted: #94a3b8;
-
-      --h1-gradient-start: #ffffff;
-      --h1-gradient-end: #38bdf8;
-
-      --accent-cyan: #38bdf8;
-      --accent-cyan-hover: #0ea5e9;
-      --accent-cyan-glow: rgba(56, 189, 248, 0.25);
-      --accent-emerald: #10b981;
-      --accent-indigo: #818cf8;
-
-      --badge-status-bg: rgba(16, 185, 129, 0.1);
-      --badge-status-border: rgba(16, 185, 129, 0.25);
-      --badge-status-text: #34d399;
-
-      --badge-skill-bg: rgba(15, 23, 42, 0.85);
-      --badge-date-bg: rgba(0, 0, 0, 0.3);
-      --badge-date-border: rgba(255, 255, 255, 0.07);
-
-      --timeline-line: rgba(56, 189, 248, 0.2);
-
-      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-      --shadow-lg: 0 20px 45px -15px rgba(0, 0, 0, 0.6);
-
-      --theme-btn-bg: rgba(255, 255, 255, 0.05);
-      --theme-btn-border: rgba(255, 255, 255, 0.12);
-      --theme-btn-color: #f8fafc;
-      --theme-btn-hover-bg: rgba(255, 255, 255, 0.1);
-    }
-
-    /* TEMA CLARO */
-    [data-theme="light"] {
+    /* TEMA CLARO (PADRÃO) */
+    :root, [data-theme="light"] {
       --bg-page: #f8fafc;
       --bg-gradient-1: rgba(14, 165, 233, 0.08);
       --bg-gradient-2: rgba(99, 102, 241, 0.05);
@@ -130,6 +84,51 @@
       --theme-btn-border: #cbd5e1;
       --theme-btn-color: #0f172a;
       --theme-btn-hover-bg: #f1f5f9;
+    }
+
+    /* TEMA ESCURO (OPCIONAL VIA TOGGLE) */
+    [data-theme="dark"] {
+      --bg-page: #0b0f19;
+      --bg-gradient-1: rgba(56, 189, 248, 0.12);
+      --bg-gradient-2: rgba(129, 140, 248, 0.08);
+      --bg-gradient-3: rgba(16, 185, 129, 0.05);
+
+      --card-bg: rgba(17, 24, 39, 0.8);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover-border: rgba(56, 189, 248, 0.35);
+      --surface-subtle: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(255, 255, 255, 0.06);
+
+      --text-main: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --h1-gradient-start: #ffffff;
+      --h1-gradient-end: #38bdf8;
+
+      --accent-cyan: #38bdf8;
+      --accent-cyan-hover: #0ea5e9;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.25);
+      --accent-emerald: #10b981;
+      --accent-indigo: #818cf8;
+
+      --badge-status-bg: rgba(16, 185, 129, 0.1);
+      --badge-status-border: rgba(16, 185, 129, 0.25);
+      --badge-status-text: #34d399;
+
+      --badge-skill-bg: rgba(15, 23, 42, 0.85);
+      --badge-date-bg: rgba(0, 0, 0, 0.3);
+      --badge-date-border: rgba(255, 255, 255, 0.07);
+
+      --timeline-line: rgba(56, 189, 248, 0.2);
+
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 20px 45px -15px rgba(0, 0, 0, 0.6);
+
+      --theme-btn-bg: rgba(255, 255, 255, 0.05);
+      --theme-btn-border: rgba(255, 255, 255, 0.12);
+      --theme-btn-color: #f8fafc;
+      --theme-btn-hover-bg: rgba(255, 255, 255, 0.1);
     }
 
     * {
@@ -192,26 +191,34 @@
       margin-bottom: 2.5rem;
     }
 
+    /* HEADER TOP: CÁPSULAS SEMPRE LADO A LADO */
     .header-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+      gap: 0.75rem;
+      flex-wrap: nowrap;
       margin-bottom: 1.25rem;
+      width: 100%;
     }
 
     .status-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.35rem 0.85rem;
+      padding: 0.38rem 0.85rem;
       border-radius: 9999px;
       background: var(--badge-status-bg);
       border: 1px solid var(--badge-status-border);
       color: var(--badge-status-text);
       font-size: 0.82rem;
       font-weight: 600;
+      white-space: nowrap;
+      min-width: 0;
+    }
+
+    .status-text-mobile {
+      display: none;
     }
 
     .status-pulse {
@@ -221,6 +228,7 @@
       background-color: var(--accent-emerald);
       box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
       animation: pulse 2s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulse {
@@ -231,15 +239,17 @@
 
     /* BOTÃO DE TEMA (CLARO / ESCURO) */
     .theme-toggle-btn {
+      flex-shrink: 0;
+      white-space: nowrap;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.45rem 0.95rem;
+      padding: 0.38rem 0.85rem;
       border-radius: 9999px;
       background: var(--theme-btn-bg);
       border: 1px solid var(--theme-btn-border);
       color: var(--theme-btn-color);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
       user-select: none;
@@ -293,30 +303,35 @@
       font-weight: 500;
     }
 
+    /* CAMPOS DE CONTATO JUSTIFICADOS / GRID ESTRUTURADA */
     .contact-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.75rem;
       margin-top: 1.5rem;
       font-size: 0.92rem;
+      width: 100%;
     }
 
     .contact-item {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
       color: var(--text-secondary);
       background: var(--surface-subtle);
       border: 1px solid var(--card-border);
-      padding: 0.4rem 0.85rem;
+      padding: 0.55rem 0.95rem;
       border-radius: var(--radius-sm);
       text-decoration: none;
       cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .contact-item i {
       color: var(--accent-cyan);
       font-size: 0.95rem;
+      flex-shrink: 0;
     }
 
     .contact-item:hover {
@@ -326,29 +341,41 @@
       transform: translateY(-1px);
     }
 
-    .copy-btn {
+    .contact-item .copy-btn {
       background: none;
       border: none;
       color: var(--text-muted);
       cursor: pointer;
       padding: 2px 4px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
+      margin-left: auto;
+      flex-shrink: 0;
     }
 
-    .copy-btn:hover {
+    .contact-item .copy-btn:hover {
       color: var(--accent-cyan);
     }
 
+    .contact-item .external-icon {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* BOTÕES DE AÇÃO JUSTIFICADOS */
     .actions {
-      margin-top: 1.75rem;
+      margin-top: 1.5rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.85rem;
+      width: 100%;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.6rem;
       padding: 0.75rem 1.4rem;
       border-radius: var(--radius-sm);
@@ -357,6 +384,8 @@
       text-decoration: none;
       cursor: pointer;
       border: 1px solid transparent;
+      flex: 1 1 220px;
+      box-sizing: border-box;
     }
 
     .btn-primary {
@@ -388,7 +417,7 @@
       transform: translateY(-2px);
     }
 
-    /* SEÇÕES */
+    /* SEÇÕES E PARÁGRAFOS JUSTIFICADOS */
     section {
       margin-bottom: 2.75rem;
     }
@@ -423,10 +452,24 @@
       border-radius: 2px;
     }
 
+    /* TEXTO JUSTIFICADO */
     p.lead {
       color: var(--text-secondary);
       font-size: 1.02rem;
       line-height: 1.7;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+
+    .card-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
     }
 
     /* CARDS & TIMELINE */
@@ -519,28 +562,29 @@
       border: 1px solid var(--badge-date-border);
     }
 
-    .card-desc {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-top: 0.5rem;
-    }
-
     .card-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.85rem;
+      gap: 0.5rem;
+      margin-top: 0.95rem;
+      width: 100%;
     }
 
     .tech-pill {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-family: var(--font-mono);
       background: rgba(56, 189, 248, 0.1);
       color: var(--accent-cyan);
       border: 1px solid rgba(56, 189, 248, 0.25);
-      padding: 0.2rem 0.55rem;
-      border-radius: 4px;
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      flex: 1 1 calc(50% - 0.5rem);
+      min-width: 130px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
     }
 
     /* PROJETOS GRID */
@@ -575,20 +619,26 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.65rem;
+      width: 100%;
     }
 
     .skill-badge {
-      display: inline-flex;
+      display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.6rem;
       background: var(--badge-skill-bg);
       border: 1px solid var(--card-border);
       color: var(--text-main);
-      padding: 0.5rem 0.9rem;
+      padding: 0.6rem 0.95rem;
       border-radius: var(--radius-sm);
       font-size: 0.9rem;
       font-weight: 500;
       box-shadow: var(--shadow-sm);
+      flex: 1 1 calc(50% - 0.65rem);
+      min-width: 150px;
+      box-sizing: border-box;
+      text-align: center;
     }
 
     .skill-badge i {
@@ -611,7 +661,7 @@
     /* CURSOS & CERTIFICAÇÕES */
     .courses-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 1rem;
     }
 
@@ -726,6 +776,26 @@
     }
 
     /* RESPONSIVIDADE */
+    @media (max-width: 600px) {
+      .header-top {
+        gap: 0.5rem;
+      }
+      .status-text-full {
+        display: none;
+      }
+      .status-text-mobile {
+        display: inline;
+      }
+      .status-badge {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.76rem;
+      }
+      .theme-toggle-btn {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.76rem;
+      }
+    }
+
     @media (max-width: 768px) {
       body {
         padding: 1rem 0.5rem;
@@ -746,12 +816,15 @@
       .timeline-dot {
         left: -1.85rem;
       }
+      .contact-bar {
+        grid-template-columns: 1fr;
+      }
       .actions {
         flex-direction: column;
       }
       .btn {
-        justify-content: center;
         width: 100%;
+        flex: auto;
       }
     }
 
@@ -824,16 +897,18 @@
   <div class="container">
     <!-- CABEÇALHO -->
     <header>
+      <!-- HEADER TOP: CÁPSULAS SEMPRE LADO A LADO -->
       <div class="header-top">
         <div class="status-badge">
           <span class="status-pulse"></span>
-          Disponível para novos desafios e projetos
+          <span class="status-text-full">Disponível para novos desafios e projetos</span>
+          <span class="status-text-mobile">Disponível para projetos</span>
         </div>
         
         <!-- BOTÃO DE ALTERNÂNCIA DE TEMA -->
         <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Alternar Tema" title="Alternar entre tema Claro e Escuro">
-          <i id="themeIcon" class="fa-solid fa-sun"></i>
-          <span id="themeText">Modo Claro</span>
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+          <span id="themeText">Modo Escuro</span>
         </button>
       </div>
 
@@ -843,6 +918,7 @@
         <span class="subtitle-tag"><i class="fa-solid fa-graduation-cap"></i> UTFPR Ciência da Computação</span>
       </div>
 
+      <!-- CAMPOS DE CONTATO JUSTIFICADOS / GRID ESTRUTURADA -->
       <div class="contact-bar">
         <div class="contact-item">
           <i class="fa-solid fa-location-dot"></i>
@@ -864,10 +940,11 @@
         <a class="contact-item" href="https://github.com/thevingance" target="_blank" rel="noopener">
           <i class="fa-brands fa-github"></i>
           <span>github.com/thevingance</span>
-          <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; color: var(--text-muted);"></i>
+          <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
         </a>
       </div>
 
+      <!-- BOTÕES DE AÇÃO JUSTIFICADOS -->
       <div class="actions">
         <!-- Baixar PDF Oficial do Repositório -->
         <a href="curriculo.pdf" download="CurriculumVitae - Henrique Triches Iurkiv.pdf" class="btn btn-primary" id="downloadPdfBtn">
@@ -1212,33 +1289,33 @@
   </div>
 
   <script>
-    // GERENCIAMENTO DO TEMA (DARK / LIGHT)
+    // GERENCIAMENTO DO TEMA (PADRÃO CLARO / OPCIONAL ESCURO)
     function updateThemeUI(theme) {
       const icon = document.getElementById('themeIcon');
       const text = document.getElementById('themeText');
       if (!icon || !text) return;
 
-      if (theme === 'light') {
-        icon.className = 'fa-solid fa-moon';
-        text.textContent = 'Modo Escuro';
-      } else {
+      if (theme === 'dark') {
         icon.className = 'fa-solid fa-sun';
         text.textContent = 'Modo Claro';
+      } else {
+        icon.className = 'fa-solid fa-moon';
+        text.textContent = 'Modo Escuro';
       }
     }
 
     function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('cv_theme', newTheme);
       updateThemeUI(newTheme);
-      showToast('Tema alterado para: ' + (newTheme === 'light' ? 'Modo Claro' : 'Modo Escuro'));
+      showToast('Tema alterado para: ' + (newTheme === 'dark' ? 'Modo Escuro' : 'Modo Claro'));
     }
 
     // Inicializar UI do tema após carregar DOM
     document.addEventListener('DOMContentLoaded', () => {
-      const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
       updateThemeUI(activeTheme);
     });
 
