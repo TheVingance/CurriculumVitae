@@ -587,7 +587,16 @@
       justify-content: center;
       text-align: center;
       box-sizing: border-box;
+      transition: all 0.2s ease;
     }
+
+    /* Ciano mais claro e luminoso com mais contraste no modo escuro */
+    [data-theme="dark"] .tech-pill {
+      color: #67e8f9;
+      border-color: rgba(103, 232, 249, 0.35);
+      background: rgba(103, 232, 249, 0.08);
+    }
+
 
     /* PROJETOS GRID */
     .projects-grid {
