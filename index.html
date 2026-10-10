@@ -532,6 +532,45 @@
       font-weight: 700;
       font-size: 1.15rem;
       color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .repo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--accent-cyan);
+      background: rgba(2, 132, 199, 0.08);
+      border: 1px solid rgba(2, 132, 199, 0.25);
+      padding: 0.15rem 0.55rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .repo-link:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px var(--accent-cyan-glow);
+    }
+
+    [data-theme="dark"] .repo-link {
+      color: #67e8f9;
+      background: rgba(103, 232, 249, 0.1);
+      border-color: rgba(103, 232, 249, 0.3);
+    }
+
+    [data-theme="dark"] .repo-link:hover {
+      background: #0284c7;
+      color: #ffffff;
     }
 
     .item-role {
@@ -853,7 +892,7 @@
         padding: 0 !important;
         max-width: 100% !important;
       }
-      .actions, .status-badge, .theme-toggle-btn, .copy-btn, #toast, footer {
+      .actions, .status-badge, .theme-toggle-btn, .copy-btn, #toast, footer, .repo-link {
         display: none !important;
       }
       h1 {
@@ -1005,6 +1044,8 @@
         <div class="skills-category-title"><i class="fa-solid fa-database"></i> Bancos de Dados & SQL</div>
         <div class="skills-cluster">
           <div class="skill-badge"><i class="devicon-oracle-original colored"></i> Oracle Database</div>
+          <div class="skill-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL & pgvector</div>
+          <div class="skill-badge"><i class="devicon-redis-plain colored"></i> Redis</div>
           <div class="skill-badge"><i class="fa-solid fa-database" style="color: #38bdf8;"></i> SQL Avançado & Tuning</div>
           <div class="skill-badge"><i class="fa-solid fa-table-cells" style="color: #818cf8;"></i> Modelagem Relacional</div>
           <div class="skill-badge"><i class="fa-solid fa-bolt" style="color: #facc15;"></i> Packages, Procedures & Triggers</div>
@@ -1025,6 +1066,7 @@
       <div class="skills-category">
         <div class="skills-category-title"><i class="fa-solid fa-shield-halved"></i> Segurança da Informação & IA</div>
         <div class="skills-cluster">
+          <div class="skill-badge"><i class="fa-solid fa-shield-halved" style="color: #38bdf8;"></i> AI Firewall & LLM Gateway</div>
           <div class="skill-badge"><i class="fa-solid fa-brain" style="color: #ec4899;"></i> Segurança em IA & Prompt Injection</div>
           <div class="skill-badge"><i class="fa-solid fa-robot" style="color: #c084fc;"></i> Benchmarking de 9 LLMs</div>
           <div class="skill-badge"><i class="fa-solid fa-user-secret" style="color: #f59e0b;"></i> Ethical Hacking Prático</div>
@@ -1037,6 +1079,7 @@
         <div class="skills-category-title"><i class="fa-solid fa-cubes"></i> Arquitetura & Ferramentas</div>
         <div class="skills-cluster">
           <div class="skill-badge"><i class="fa-solid fa-layer-group" style="color: #38bdf8;"></i> Clean Architecture & DDD</div>
+          <div class="skill-badge"><i class="devicon-docker-plain colored"></i> Docker & Compose</div>
           <div class="skill-badge"><i class="devicon-git-plain colored"></i> Git</div>
           <div class="skill-badge"><i class="devicon-github-original"></i> GitHub</div>
           <div class="skill-badge"><i class="fa-solid fa-microchip" style="color: #06b6d4;"></i> Telemetria & Automação Industrial</div>
@@ -1106,11 +1149,52 @@
       <h2 class="section-title"><i class="fa-solid fa-flask"></i> Projetos & Pesquisa Acadêmica</h2>
       <div class="projects-grid">
         
+        <!-- PromptSentinel -->
+        <div class="card">
+          <div class="item-header">
+            <div>
+              <div class="item-title">
+                PromptSentinel – AI Firewall & LLM Security Gateway
+                <a href="https://github.com/TheVingance/prompt-sentinel" target="_blank" rel="noopener" class="repo-link" title="Acessar repositório no GitHub">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Código-fonte</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i>
+                </a>
+              </div>
+              <div class="item-role">
+                Projeto Pessoal / Portfólio Open Source
+                <span class="badge-current">🟢 Em Desenvolvimento</span>
+              </div>
+            </div>
+            <div class="item-date">2026 – Presente</div>
+          </div>
+          <p class="card-desc">
+            Gateway reverso de segurança e firewall de alta performance para inferência em Modelos de Linguagem (LLMs), projetado como substituto transparente (<em>drop-in replacement</em> compatível com a API da OpenAI). Implementa pipeline assíncrono em Python e FastAPI com mitigação a riscos do OWASP Top 10 for LLMs: fast-path heurístico, análise semântica de <em>prompt injection</em> e <em>jailbreaks</em> via busca vetorial com PostgreSQL e <code>pgvector</code>, mascaramento de dados sensíveis (PII/DLP), rate limiting distribuído com Redis e logs criptografados para auditoria e conformidade (LGPD/GDPR).
+          </p>
+          <div class="card-tags">
+            <span class="tech-pill">Python 3.12</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">PostgreSQL & pgvector</span>
+            <span class="tech-pill">Redis</span>
+            <span class="tech-pill">Docker Compose</span>
+            <span class="tech-pill">OWASP LLM Security</span>
+            <span class="tech-pill">Reverse Proxy</span>
+            <span class="tech-pill">Embeddings Locais</span>
+          </div>
+        </div>
+
         <!-- TCC -->
         <div class="card">
           <div class="item-header">
             <div>
-              <div class="item-title">TCC: Segurança em Inteligência Artificial</div>
+              <div class="item-title">
+                TCC: Segurança em Inteligência Artificial
+                <a href="https://github.com/TheVingance/TCC-PromptInjection" target="_blank" rel="noopener" class="repo-link" title="Acessar repositório no GitHub">
+                  <i class="fa-brands fa-github"></i>
+                  <span>Código-fonte</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i>
+                </a>
+              </div>
               <div class="item-role">Pesquisa Acadêmica / Desenvolvedor</div>
             </div>
             <div class="item-date">UTFPR • 2026</div>
