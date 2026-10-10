@@ -20,6 +20,9 @@
     <img src="https://img.shields.io/badge/Oracle_PL%2FSQL-F80000?style=flat-square&logo=oracle&logoColor=white" alt="Oracle PL/SQL">
     <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
     <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+    <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+    <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis">
+    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
     <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js">
     <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
     <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
@@ -51,12 +54,12 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 
 | Área | Tecnologias & Habilidades |
 | :--- | :--- |
-| **Banco de Dados & Back-end** | Oracle PL/SQL (Packages, Procedures, Triggers, Views), SQL Avançado, PostgreSQL, MySQL |
+| **Banco de Dados & Back-end** | Oracle PL/SQL (Packages, Procedures, Triggers, Views), SQL Avançado, PostgreSQL & pgvector, Redis, MySQL |
 | **Linguagens & Frameworks** | Python, FastAPI, Node.js, TypeScript, Java (POO), C#, JavaScript |
 | **Front-end** | React, HTML5, CSS3 Moderno, Design Responsivo |
-| **Engenharia & Arquitetura** | Clean Architecture, Domain-Driven Design (DDD), APIs RESTful |
-| **Segurança & Inteligência Artificial** | Pesquisa em Segurança de LLMs, Detecção de Prompt Injection, Ethical Hacking, Cibersegurança |
-| **Sistemas & Ferramentas** | Git, GitHub, Versionamento de Código, Telemetria & Automação Industrial, Redes de Computadores |
+| **Engenharia & Arquitetura** | Clean Architecture, Domain-Driven Design (DDD), APIs RESTful, Reverse Proxy |
+| **Segurança & Inteligência Artificial** | AI Firewall (LLM Gateway), Pesquisa em Segurança de LLMs, Detecção de Prompt Injection, OWASP Top 10 for LLMs, Ethical Hacking, Cibersegurança |
+| **Sistemas & Ferramentas** | Docker & Docker Compose, Git, GitHub, Versionamento de Código, Telemetria & Automação Industrial, Redes de Computadores |
 
 ---
 
@@ -77,7 +80,9 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 
 ## 🔬 Projetos & Pesquisa Acadêmica
 
-- **TCC: Segurança em Inteligência Artificial** *(Pesquisa Acadêmica • UTFPR • 2026)*  
+- **[PromptSentinel – AI Firewall & LLM Security Gateway](https://github.com/TheVingance/prompt-sentinel)** *(Projeto Pessoal / Portfólio • 2026 – Presente)*  
+  Gateway reverso de segurança e firewall de alta performance para inferência em LLMs (compatível com a API da OpenAI). Pipeline assíncrono em Python e FastAPI mitigando vulnerabilidades do OWASP Top 10 for LLMs: detecção de *prompt injection* e *jailbreaks* via análise semântica e busca vetorial com PostgreSQL e `pgvector`, mascaramento de dados sensíveis (PII/DLP), rate limiting distribuído com Redis e containerização completa com Docker Compose.
+- **[TCC: Segurança em Inteligência Artificial](https://github.com/TheVingance/TCC-PromptInjection)** *(Pesquisa Acadêmica • UTFPR • 2026)*  
   Framework experimental desenvolvido em Python e FastAPI para avaliação empírica de vulnerabilidade contra ataques de *prompt injection* testado em 9 modelos de linguagem (LLMs).
 - **Sistema de Monitoramento Térmico Industrial – NINFA** *(Projeto de Extensão UTFPR)*  
   Desenvolvimento de solução para aquisição, processamento e telemetria de dados térmicos em tempo real para controle operacional em ambientes industriais.
