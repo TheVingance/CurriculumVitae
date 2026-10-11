@@ -1,0 +1,6 @@
+# Certificados locais
+Certificados/
+
+# Python cache (se houver)
+__pycache__/
+*.pyc
