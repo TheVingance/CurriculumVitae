@@ -58,7 +58,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 | **Linguagens & Frameworks** | Python, FastAPI, Node.js, TypeScript, Java (POO), C#, JavaScript |
 | **Front-end** | React, HTML5, CSS3 Moderno, Design Responsivo |
 | **Engenharia & Arquitetura** | Clean Architecture, Domain-Driven Design (DDD), APIs RESTful, Reverse Proxy |
-| **Segurança & Inteligência Artificial** | AI Firewall (LLM Gateway), LLM Engineering, RAG & Agents, Pesquisa em Segurança de LLMs, Detecção de Prompt Injection, OWASP Top 10 for LLMs, Ethical Hacking, Cibersegurança |
+| **Segurança & Inteligência Artificial** | AI Firewall (LLM Gateway), LLM Engineering, RAG & Agents, Pesquisa em Segurança de LLMs, Detecção de Prompt Injection, OWASP Top 10 for LLMs, Threat Management & Vulnerability Assessment (Cisco), Ethical Hacking, Cibersegurança |
 | **Sistemas & Ferramentas** | Docker & Docker Compose, Git, GitHub, Versionamento de Código, Telemetria & Automação Industrial, Redes de Computadores |
 
 ---
@@ -98,14 +98,42 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 
 ---
 
+## 🛡️ Credenciais Digitais & Badges Verificadas (Cisco Networking Academy)
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="assets/certificates/cisco-cyber-threat-management.pdf" target="_blank">
+        <img src="assets/badges/cisco-cyber-threat-management.png" width="150" alt="Cisco Verified Badge - Cyber Threat Management"><br/>
+        <strong>Cyber Threat Management</strong>
+      </a><br/>
+      <sub>Cisco Networking Academy • Emitido em 14 de Outubro de 2026</sub><br/>
+      <small>🔒 Avaliação de Vulnerabilidades, Planos de Gestão de Riscos, Resposta a Incidentes & Forense</small><br/>
+      <a href="assets/certificates/cisco-cyber-threat-management.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
+    </td>
+    <td align="center" width="50%">
+      <a href="assets/certificates/cisco-introduction-to-cybersecurity.pdf" target="_blank">
+        <img src="assets/badges/cisco-introduction-to-cybersecurity.png" width="150" alt="Cisco Verified Badge - Introduction to Cybersecurity"><br/>
+        <strong>Introduction to Cybersecurity</strong>
+      </a><br/>
+      <sub>Cisco Networking Academy • Emitido em 10 de Outubro de 2026</sub><br/>
+      <small>🛡️ Fundamentos de Cibersegurança, Vetores de Ataques, Defesa Cibernética & Operações Seguras</small><br/>
+      <a href="assets/certificates/cisco-introduction-to-cybersecurity.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 📜 Cursos & Certificações
 
+- **Cyber Threat Management** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-cyber-threat-management.pdf)]
+- **Introduction to Cybersecurity** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-introduction-to-cybersecurity.pdf)]
 - **AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents** — Udemy (Ligency & Ed Donner) • 33,5h
 - **Banco de Dados: Oracle PL/SQL** — IFRS (Inst. Federal do Rio Grande do Sul) • 20h
 - **Workshop Oracle APEX – Sales Hub & ORDS** — Frimesa Cooperativa Central • 8h
 - **Básico – Formação em Cibersegurança** — Hackers do Bem / SENAI SP • 64h
 - **Nivelamento – Formação em Cibersegurança** — Hackers do Bem / SENAI SP • 80h
-- **Introdução à Cibersegurança** — Cisco Networking Academy
 - **JavaScript: Fundamentos para Desenvolvimento Web Interativo** — IFRS (Inst. Federal do RS) • 40h
 - **Python 3 do Básico ao Avançado com Projetos** — Udemy • 141,5h
 - **Java COMPLETO: Programação Orientada a Objetos + Projetos** — Udemy (Prof. Nelio Alves) • 54h

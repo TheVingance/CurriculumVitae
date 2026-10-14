@@ -777,6 +777,492 @@
       border: 1px solid var(--card-border);
     }
 
+    /* CREDENCIAIS VERIFICADAS CISCO & BADGES */
+    .cisco-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .cisco-card {
+      background: var(--surface-subtle);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-speed) ease;
+    }
+
+    .cisco-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      transition: background 0.3s ease;
+    }
+
+    .cisco-card.cisco-blue::before {
+      background: linear-gradient(90deg, #0284c7, #38bdf8);
+    }
+
+    .cisco-card.cisco-green::before {
+      background: linear-gradient(90deg, #059669, #10b981);
+    }
+
+    .cisco-card:hover {
+      transform: translateY(-3px);
+      background: var(--surface-hover);
+    }
+
+    .cisco-card.cisco-blue:hover {
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 12px 28px -6px rgba(14, 165, 233, 0.2);
+    }
+
+    .cisco-card.cisco-green:hover {
+      border-color: rgba(16, 185, 129, 0.5);
+      box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.2);
+    }
+
+    .cisco-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.1rem;
+    }
+
+    .cisco-badge-img-wrap {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .cisco-badge-img-wrap:hover {
+      transform: scale(1.08) rotate(-2deg);
+    }
+
+    .cisco-badge-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    }
+
+    .cisco-meta-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cisco-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      margin-bottom: 0.35rem;
+      font-family: var(--font-mono);
+    }
+
+    .cisco-tag.blue {
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+
+    .cisco-tag.green {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .cisco-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .cisco-issuer {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .cisco-desc {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .cisco-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .cisco-skill-pill {
+      font-size: 0.73rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--surface-hover);
+      border: 1px solid var(--card-border);
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+    }
+
+    .cisco-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--card-border);
+    }
+
+    .btn-cred {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.42rem 0.85rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      font-family: var(--font-sans);
+    }
+
+    .btn-cred-primary {
+      background: var(--accent-cyan);
+      color: #ffffff !important;
+    }
+
+    .btn-cred-primary:hover {
+      background: var(--accent-cyan-hover);
+      box-shadow: 0 4px 12px var(--accent-cyan-glow);
+    }
+
+    .btn-cred-secondary {
+      background: var(--card-bg);
+      border-color: var(--card-border);
+      color: var(--text-main) !important;
+    }
+
+    .btn-cred-secondary:hover {
+      background: var(--surface-hover);
+      border-color: var(--card-hover-border);
+    }
+
+    .btn-cred-ghost {
+      background: transparent;
+      border-color: transparent;
+      color: var(--accent-cyan) !important;
+      padding: 0.42rem 0.55rem;
+    }
+
+    .btn-cred-ghost:hover {
+      text-decoration: underline;
+    }
+
+    .subsection-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 1.75rem 0 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .subsection-title i {
+      color: var(--accent-cyan);
+    }
+
+    /* MODAL DE CREDENCIAIS & CERTIFICADOS */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .modal-backdrop.show {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .modal-dialog {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      transform: scale(0.95);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.show .modal-dialog {
+      transform: scale(1);
+    }
+
+    .modal-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      background: var(--surface-subtle);
+    }
+
+    .modal-title-area {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .modal-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 0.25rem;
+    }
+
+    .modal-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--surface-hover);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .modal-close:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border-color: var(--accent-cyan);
+      transform: rotate(90deg);
+    }
+
+    .modal-tabs {
+      display: flex;
+      background: var(--surface-subtle);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0 1.5rem;
+      gap: 0.5rem;
+    }
+
+    .modal-tab {
+      padding: 0.75rem 1rem;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .modal-tab:hover {
+      color: var(--text-main);
+    }
+
+    .modal-tab.active {
+      color: var(--accent-cyan);
+      border-bottom-color: var(--accent-cyan);
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .modal-tab-content {
+      display: none;
+    }
+
+    .modal-tab-content.active {
+      display: block;
+      animation: fadeIn 0.25s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-preview-frame {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: center;
+    }
+
+    .modal-preview-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .modal-badge-display {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+
+    @media (max-width: 680px) {
+      .modal-badge-display {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.25rem;
+      }
+    }
+
+    .modal-badge-large {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+      flex-shrink: 0;
+      animation: badgeFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes badgeFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .modal-badge-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .modal-badge-info h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-badge-info p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+
+    .modal-details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      background: var(--surface-subtle);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+    }
+
+    .modal-detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      font-size: 0.82rem;
+    }
+
+    .detail-label {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .detail-value {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .modal-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--card-border);
+      background: var(--surface-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .modal-cert-status {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .modal-footer-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
     /* FOOTER */
     footer {
       margin-top: 3rem;
@@ -892,7 +1378,7 @@
         padding: 0 !important;
         max-width: 100% !important;
       }
-      .actions, .status-badge, .theme-toggle-btn, .copy-btn, #toast, footer, .repo-link {
+      .actions, .status-badge, .theme-toggle-btn, .copy-btn, #toast, footer, .repo-link, .modal-backdrop, .cisco-actions {
         display: none !important;
       }
       h1 {
@@ -915,7 +1401,7 @@
       .section-title::after {
         display: none !important;
       }
-      .card, .course-card {
+      .card, .course-card, .cisco-card {
         background: #f8fafc !important;
         border: 1px solid #e2e8f0 !important;
         break-inside: avoid;
@@ -1071,6 +1557,7 @@
           <div class="skill-badge"><i class="fa-solid fa-lock" style="color: #a855f7;"></i> Segurança em IA & Prompt Injection</div>
           <div class="skill-badge"><i class="fa-solid fa-robot" style="color: #c084fc;"></i> Benchmarking de 9 LLMs</div>
           <div class="skill-badge"><i class="fa-solid fa-user-secret" style="color: #f59e0b;"></i> Ethical Hacking Prático</div>
+          <div class="skill-badge"><i class="fa-solid fa-shield-virus" style="color: #38bdf8;"></i> Threat Management (Cisco)</div>
           <div class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #34d399;"></i> Cibersegurança & Redes (Cisco)</div>
         </div>
       </div>
@@ -1276,6 +1763,92 @@
     <!-- CURSOS & CERTIFICAÇÕES -->
     <section>
       <h2 class="section-title"><i class="fa-solid fa-award"></i> Cursos & Certificações</h2>
+
+      <!-- CREDENCIAIS OFICIAIS CISCO & BADGES VERIFICADAS -->
+      <div class="cisco-showcase">
+
+        <!-- Card 1: Cyber Threat Management -->
+        <div class="cisco-card cisco-blue">
+          <div class="cisco-header">
+            <div class="cisco-badge-img-wrap" onclick="openCredentialModal('threat', 'badge')" title="Clique para ampliar a Badge Oficial">
+              <img src="assets/badges/cisco-cyber-threat-management.png" alt="Badge Oficial Cisco Cyber Threat Management" class="cisco-badge-img" />
+            </div>
+            <div class="cisco-meta-wrap">
+              <span class="cisco-tag blue"><i class="fa-solid fa-certificate"></i> Credencial Oficial Verificada</span>
+              <div class="cisco-title">Cyber Threat Management</div>
+              <div class="cisco-issuer">
+                <span><i class="fa-solid fa-building-columns"></i> Cisco Networking Academy</span>
+                <span>•</span>
+                <span>Outubro de 2026</span>
+              </div>
+            </div>
+          </div>
+          <p class="cisco-desc">
+            Credencial oficial comprovando proficiência em conformidade institucional, avaliação de vulnerabilidades em sistemas e redes corporativas, formulação de planos de gestão de riscos, mitigação de ameaças, resposta a incidentes e investigações forenses digitais.
+          </p>
+          <div class="cisco-skills">
+            <span class="cisco-skill-pill">Vulnerability Assessment</span>
+            <span class="cisco-skill-pill">Threat Management</span>
+            <span class="cisco-skill-pill">Risk Management</span>
+            <span class="cisco-skill-pill">Incident Response</span>
+            <span class="cisco-skill-pill">Digital Forensics</span>
+            <span class="cisco-skill-pill">Compliance Frameworks</span>
+          </div>
+          <div class="cisco-actions">
+            <button type="button" class="btn-cred btn-cred-primary" onclick="openCredentialModal('threat', 'cert')">
+              <i class="fa-solid fa-file-lines"></i> Visualizar Certificado
+            </button>
+            <button type="button" class="btn-cred btn-cred-secondary" onclick="openCredentialModal('threat', 'badge')">
+              <i class="fa-solid fa-shield-halved"></i> Badge Oficial
+            </button>
+            <a href="assets/certificates/cisco-cyber-threat-management.pdf" target="_blank" rel="noopener" class="btn-cred btn-cred-ghost" title="Abrir PDF original em nova aba">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Introduction to Cybersecurity -->
+        <div class="cisco-card cisco-green">
+          <div class="cisco-header">
+            <div class="cisco-badge-img-wrap" onclick="openCredentialModal('cyberintro', 'badge')" title="Clique para ampliar a Badge Oficial">
+              <img src="assets/badges/cisco-introduction-to-cybersecurity.png" alt="Badge Oficial Cisco Introduction to Cybersecurity" class="cisco-badge-img" />
+            </div>
+            <div class="cisco-meta-wrap">
+              <span class="cisco-tag green"><i class="fa-solid fa-certificate"></i> Credencial Oficial Verificada</span>
+              <div class="cisco-title">Introduction to Cybersecurity</div>
+              <div class="cisco-issuer">
+                <span><i class="fa-solid fa-building-columns"></i> Cisco Networking Academy</span>
+                <span>•</span>
+                <span>Outubro de 2026</span>
+              </div>
+            </div>
+          </div>
+          <p class="cisco-desc">
+            Credencial oficial atestando domínio dos fundamentos da segurança cibernética, identificação e análise de vetores de ataques, malwares e vulnerabilidades de redes, estratégias de proteção de dados, privacidade e salvaguarda de infraestruturas organizacionais.
+          </p>
+          <div class="cisco-skills">
+            <span class="cisco-skill-pill">Cibersegurança Defensiva</span>
+            <span class="cisco-skill-pill">Vetores de Ataques</span>
+            <span class="cisco-skill-pill">Proteção de Infraestrutura</span>
+            <span class="cisco-skill-pill">Segurança Corporativa</span>
+            <span class="cisco-skill-pill">Privacidade & Redes</span>
+          </div>
+          <div class="cisco-actions">
+            <button type="button" class="btn-cred btn-cred-primary" onclick="openCredentialModal('cyberintro', 'cert')">
+              <i class="fa-solid fa-file-lines"></i> Visualizar Certificado
+            </button>
+            <button type="button" class="btn-cred btn-cred-secondary" onclick="openCredentialModal('cyberintro', 'badge')">
+              <i class="fa-solid fa-shield-halved"></i> Badge Oficial
+            </button>
+            <a href="assets/certificates/cisco-introduction-to-cybersecurity.pdf" target="_blank" rel="noopener" class="btn-cred btn-cred-ghost" title="Abrir PDF original em nova aba">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="subsection-title"><i class="fa-solid fa-graduation-cap"></i> Cursos Complementares & Especializações</h3>
       <div class="courses-grid">
         
         <div class="course-card">
@@ -1342,20 +1915,6 @@
               <span>Hackers do Bem / SENAI SP</span>
               <span>•</span>
               <span class="course-badge">80h</span>
-              <span>•</span>
-              <span>2026</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="course-card">
-          <div class="course-icon"><i class="fa-solid fa-lock"></i></div>
-          <div class="course-info">
-            <div class="course-title">Introdução à Cibersegurança</div>
-            <div class="course-meta">
-              <span>Cisco Networking Academy</span>
-              <span>•</span>
-              <span class="course-badge">Oficial Cisco</span>
               <span>•</span>
               <span>2026</span>
             </div>
@@ -1448,6 +2007,84 @@
     </footer>
   </div>
 
+  <!-- MODAL DE CREDENCIAIS & CERTIFICADOS INTERATIVO -->
+  <div id="credentialModal" class="modal-backdrop" onclick="handleBackdropClick(event)" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-area">
+          <span id="modalCategory" class="cisco-tag blue"><i class="fa-solid fa-certificate"></i> Credencial Oficial Verificada</span>
+          <h3 id="modalTitle" class="modal-title">Cyber Threat Management</h3>
+        </div>
+        <button type="button" class="modal-close" onclick="closeModal()" aria-label="Fechar modal" title="Fechar (Esc)">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <div class="modal-tabs">
+        <button type="button" id="tabCertBtn" class="modal-tab active" onclick="switchModalTab('cert')">
+          <i class="fa-solid fa-file-lines"></i> Certificado de Conclusão
+        </button>
+        <button type="button" id="tabBadgeBtn" class="modal-tab" onclick="switchModalTab('badge')">
+          <i class="fa-solid fa-shield-halved"></i> Badge Oficial Verificada
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Visão do Certificado -->
+        <div id="modalCertView" class="modal-tab-content active">
+          <div class="modal-preview-frame">
+            <img id="modalCertImg" src="" alt="Certificado Cisco" class="modal-preview-img" />
+          </div>
+        </div>
+
+        <!-- Visão da Badge -->
+        <div id="modalBadgeView" class="modal-tab-content">
+          <div class="modal-badge-display">
+            <img id="modalBadgeImg" src="" alt="Badge Oficial Cisco" class="modal-badge-large" />
+            <div class="modal-badge-info">
+              <h4 id="modalBadgeTitle">Cisco Verified Badge</h4>
+              <p id="modalBadgeDesc"></p>
+              <div class="modal-details-grid">
+                <div class="modal-detail-item">
+                  <span class="detail-label">Emissor Oficial</span>
+                  <span id="modalIssuer" class="detail-value">Cisco Networking Academy</span>
+                </div>
+                <div class="modal-detail-item">
+                  <span class="detail-label">Destinatário</span>
+                  <span class="detail-value">Henrique Triches Iurkiv</span>
+                </div>
+                <div class="modal-detail-item">
+                  <span class="detail-label">Data de Emissão</span>
+                  <span id="modalIssueDate" class="detail-value"></span>
+                </div>
+                <div class="modal-detail-item">
+                  <span class="detail-label">Status da Credencial</span>
+                  <span class="detail-value" style="color: var(--accent-emerald);">
+                    <i class="fa-solid fa-circle-check"></i> Oficialmente Verificada
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-footer-left">
+          <span class="modal-cert-status"><i class="fa-solid fa-shield-halved"></i> Cisco Verified Digital Credential</span>
+        </div>
+        <div class="modal-footer-actions">
+          <a id="modalDownloadPdf" href="" download class="btn-cred btn-cred-secondary">
+            <i class="fa-solid fa-download"></i> Baixar PDF
+          </a>
+          <a id="modalOpenPdf" href="" target="_blank" rel="noopener" class="btn-cred btn-cred-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir PDF Oficial
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- TOAST DE FEEDBACK AO COPIAR -->
   <div id="toast">
     <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i>
@@ -1510,6 +2147,110 @@
         toast.classList.remove('show');
       }, 3000);
     }
+
+    // DADOS DAS CREDENCIAIS CISCO
+    const credentialData = {
+      threat: {
+        category: 'Cisco Networking Academy • Credencial Verificada',
+        categoryClass: 'blue',
+        title: 'Cyber Threat Management',
+        issueDate: '14 de Outubro de 2026',
+        issuer: 'Lynn Bloomer — Diretora, Cisco Networking Academy',
+        badgeImg: 'assets/badges/cisco-cyber-threat-management.png',
+        certImg: 'assets/certificates/cisco-cyber-threat-management-preview.png',
+        pdfUrl: 'assets/certificates/cisco-cyber-threat-management.pdf',
+        pdfDownloadName: 'Certificado_Cisco_Cyber_Threat_Management_Henrique_Triches.pdf',
+        badgeTitle: 'Cisco Verified Badge: Cyber Threat Management',
+        badgeDesc: 'Credencial emitida oficialmente pela Cisco Networking Academy reconhecendo proficiência e governança em avaliação de vulnerabilidades em redes e sistemas, conformidade com frameworks institucionais, formulação de planos de gestão de riscos, mitigação de ameaças, resposta a incidentes de segurança e investigação forense digital.'
+      },
+      cyberintro: {
+        category: 'Cisco Networking Academy • Credencial Verificada',
+        categoryClass: 'green',
+        title: 'Introduction to Cybersecurity',
+        issueDate: '10 de Outubro de 2026',
+        issuer: 'Lynn Bloomer — Diretora, Cisco Networking Academy',
+        badgeImg: 'assets/badges/cisco-introduction-to-cybersecurity.png',
+        certImg: 'assets/certificates/cisco-introduction-to-cybersecurity-preview.png',
+        pdfUrl: 'assets/certificates/cisco-introduction-to-cybersecurity.pdf',
+        pdfDownloadName: 'Certificado_Cisco_Introduction_to_Cybersecurity_Henrique_Triches.pdf',
+        badgeTitle: 'Cisco Verified Badge: Introduction to Cybersecurity',
+        badgeDesc: 'Credencial emitida oficialmente pela Cisco Networking Academy atestando compreensão sólida sobre os fundamentos de segurança cibernética, identificação de vetores de ataques, malwares, privacidade online, proteção de infraestruturas organizacionais e salvaguarda de dados operacionais.'
+      }
+    };
+
+    // CONTROLE DO MODAL DE CREDENCIAIS
+    function openCredentialModal(key, initialTab) {
+      const data = credentialData[key];
+      if (!data) return;
+
+      const modal = document.getElementById('credentialModal');
+      const catEl = document.getElementById('modalCategory');
+      catEl.innerHTML = '<i class="fa-solid fa-certificate"></i> ' + data.category;
+      catEl.className = 'cisco-tag ' + data.categoryClass;
+
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalCertImg').src = data.certImg;
+      document.getElementById('modalCertImg').alt = 'Certificado: ' + data.title;
+      document.getElementById('modalBadgeImg').src = data.badgeImg;
+      document.getElementById('modalBadgeImg').alt = 'Badge Oficial: ' + data.title;
+      document.getElementById('modalBadgeTitle').textContent = data.badgeTitle;
+      document.getElementById('modalBadgeDesc').textContent = data.badgeDesc;
+      document.getElementById('modalIssueDate').textContent = data.issueDate;
+      document.getElementById('modalIssuer').textContent = data.issuer;
+
+      const openBtn = document.getElementById('modalOpenPdf');
+      openBtn.href = data.pdfUrl;
+
+      const downloadBtn = document.getElementById('modalDownloadPdf');
+      downloadBtn.href = data.pdfUrl;
+      downloadBtn.download = data.pdfDownloadName;
+
+      switchModalTab(initialTab || 'cert');
+
+      modal.classList.add('show');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function switchModalTab(tab) {
+      const certTabBtn = document.getElementById('tabCertBtn');
+      const badgeTabBtn = document.getElementById('tabBadgeBtn');
+      const certView = document.getElementById('modalCertView');
+      const badgeView = document.getElementById('modalBadgeView');
+
+      if (tab === 'cert') {
+        certTabBtn.classList.add('active');
+        badgeTabBtn.classList.remove('active');
+        certView.classList.add('active');
+        badgeView.classList.remove('active');
+      } else {
+        badgeTabBtn.classList.add('active');
+        certTabBtn.classList.remove('active');
+        badgeView.classList.add('active');
+        certView.classList.remove('active');
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('credentialModal');
+      if (!modal) return;
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target.id === 'credentialModal') {
+        closeModal();
+      }
+    }
+
+    // Tecla ESC para fechar modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
   </script>
 </body>
 </html>
