@@ -59,7 +59,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 | **Front-end** | React, HTML5, CSS3 Moderno, Design Responsivo |
 | **Engenharia & Arquitetura** | Clean Architecture, Domain-Driven Design (DDD), APIs RESTful, Reverse Proxy |
 | **Segurança & Inteligência Artificial** | AI Firewall (LLM Gateway), LLM Engineering, RAG & Agents, Pesquisa em Segurança de LLMs, Detecção de Prompt Injection, OWASP Top 10 for LLMs, Threat Management & Vulnerability Assessment (Cisco), Ethical Hacking, Cibersegurança |
-| **Sistemas & Ferramentas** | Docker & Docker Compose, Git, GitHub, Versionamento de Código, Telemetria & Automação Industrial, Redes de Computadores |
+| **Sistemas & Ferramentas** | Docker & Docker Compose, Git, GitHub, Versionamento de Código, Telemetria & Automação Industrial, Redes de Computadores, Cisco IOS & Ativos de Rede |
 
 ---
 
@@ -104,7 +104,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
   <tr>
     <td align="center" width="50%">
       <a href="assets/certificates/cisco-cyber-threat-management.pdf" target="_blank">
-        <img src="assets/badges/cisco-cyber-threat-management.png" width="150" alt="Cisco Verified Badge - Cyber Threat Management"><br/>
+        <img src="assets/badges/cisco-cyber-threat-management.png" width="140" alt="Cisco Verified Badge - Cyber Threat Management"><br/>
         <strong>Cyber Threat Management</strong>
       </a><br/>
       <sub>Cisco Networking Academy • Emitido em 14 de Outubro de 2026</sub><br/>
@@ -113,12 +113,32 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
     </td>
     <td align="center" width="50%">
       <a href="assets/certificates/cisco-introduction-to-cybersecurity.pdf" target="_blank">
-        <img src="assets/badges/cisco-introduction-to-cybersecurity.png" width="150" alt="Cisco Verified Badge - Introduction to Cybersecurity"><br/>
+        <img src="assets/badges/cisco-introduction-to-cybersecurity.png" width="140" alt="Cisco Verified Badge - Introduction to Cybersecurity"><br/>
         <strong>Introduction to Cybersecurity</strong>
       </a><br/>
       <sub>Cisco Networking Academy • Emitido em 10 de Outubro de 2026</sub><br/>
       <small>🛡️ Fundamentos de Cibersegurança, Vetores de Ataques, Defesa Cibernética & Operações Seguras</small><br/>
       <a href="assets/certificates/cisco-introduction-to-cybersecurity.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="assets/certificates/cisco-networking-basics.pdf" target="_blank">
+        <img src="assets/badges/cisco-networking-basics.png" width="140" alt="Cisco Verified Badge - Networking Basics"><br/>
+        <strong>Networking Basics</strong>
+      </a><br/>
+      <sub>Cisco Networking Academy • Emitido em 14 de Outubro de 2026</sub><br/>
+      <small>🌐 Arquitetura e Protocolos de Rede, Ethernet, IPv4/IPv6, Roteamento & Wi-Fi Seguro</small><br/>
+      <a href="assets/certificates/cisco-networking-basics.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
+    </td>
+    <td align="center" width="50%">
+      <a href="assets/certificates/cisco-networking-devices-and-initial-configuration.pdf" target="_blank">
+        <img src="assets/badges/cisco-networking-devices-and-initial-configuration.png" width="140" alt="Cisco Verified Badge - Networking Devices and Initial Configuration"><br/>
+        <strong>Networking Devices & Initial Configuration</strong>
+      </a><br/>
+      <sub>Cisco Networking Academy • Emitido em 16 de Outubro de 2026</sub><br/>
+      <small>⚙️ Configuração via Cisco IOS, Subnetting IPv4, Comutação Ethernet & Serviços de Rede</small><br/>
+      <a href="assets/certificates/cisco-networking-devices-and-initial-configuration.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
     </td>
   </tr>
 </table>
@@ -129,16 +149,21 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 
 - **Cyber Threat Management** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-cyber-threat-management.pdf)]
 - **Introduction to Cybersecurity** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-introduction-to-cybersecurity.pdf)]
+- **Networking Basics** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-networking-basics.pdf)]
+- **Networking Devices and Basic Configuration** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-networking-devices-and-initial-configuration.pdf)]
 - **AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents** — Udemy (Ligency & Ed Donner) • 33,5h
+- **AI Engineer Production Track: Deploy LLMs & Agents at Scale** — Udemy (Ligency & Ed Donner) • 18,5h
 - **Banco de Dados: Oracle PL/SQL** — IFRS (Inst. Federal do Rio Grande do Sul) • 20h
 - **Workshop Oracle APEX – Sales Hub & ORDS** — Frimesa Cooperativa Central • 8h
 - **Básico – Formação em Cibersegurança** — Hackers do Bem / SENAI SP • 64h
 - **Nivelamento – Formação em Cibersegurança** — Hackers do Bem / SENAI SP • 80h
+- **Google SecOps Foundation** — Arki1 (Paulo Breviglieri) • 2h
 - **JavaScript: Fundamentos para Desenvolvimento Web Interativo** — IFRS (Inst. Federal do RS) • 40h
 - **Python 3 do Básico ao Avançado com Projetos** — Udemy • 141,5h
 - **Java COMPLETO: Programação Orientada a Objetos + Projetos** — Udemy (Prof. Nelio Alves) • 54h
 - **Arquitetura de Redes** — Udemy (Prof. Gabriel Torres) • 26,5h
 - **Fundamentos de Ethical Hacking Prático** — Udemy • 24,5h
+- **Introdução à Computação Quântica** — UTFPR (CACOMP-MD / DACOM-MD) • 8h
 
 ---
 

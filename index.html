@@ -817,6 +817,14 @@
       background: linear-gradient(90deg, #059669, #10b981);
     }
 
+    .cisco-card.cisco-indigo::before {
+      background: linear-gradient(90deg, #4f46e5, #818cf8);
+    }
+
+    .cisco-card.cisco-purple::before {
+      background: linear-gradient(90deg, #7c3aed, #a855f7);
+    }
+
     .cisco-card:hover {
       transform: translateY(-3px);
       background: var(--surface-hover);
@@ -830,6 +838,16 @@
     .cisco-card.cisco-green:hover {
       border-color: rgba(16, 185, 129, 0.5);
       box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.2);
+    }
+
+    .cisco-card.cisco-indigo:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      box-shadow: 0 12px 28px -6px rgba(99, 102, 241, 0.2);
+    }
+
+    .cisco-card.cisco-purple:hover {
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 12px 28px -6px rgba(168, 85, 247, 0.2);
     }
 
     .cisco-header {
@@ -888,6 +906,26 @@
       background: rgba(16, 185, 129, 0.12);
       color: var(--accent-emerald);
       border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .cisco-tag.indigo {
+      background: rgba(99, 102, 241, 0.12);
+      color: #6366f1;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .cisco-tag.purple {
+      background: rgba(168, 85, 247, 0.12);
+      color: #9333ea;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    [data-theme="dark"] .cisco-tag.indigo {
+      color: #a5b4fc;
+    }
+
+    [data-theme="dark"] .cisco-tag.purple {
+      color: #d8b4fe;
     }
 
     .cisco-title {
@@ -1559,6 +1597,8 @@
           <div class="skill-badge"><i class="fa-solid fa-user-secret" style="color: #f59e0b;"></i> Ethical Hacking Prático</div>
           <div class="skill-badge"><i class="fa-solid fa-shield-virus" style="color: #38bdf8;"></i> Threat Management (Cisco)</div>
           <div class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #34d399;"></i> Cibersegurança & Redes (Cisco)</div>
+          <div class="skill-badge"><i class="fa-solid fa-route" style="color: #6366f1;"></i> Networking Basics & Protocolos (Cisco)</div>
+          <div class="skill-badge"><i class="fa-solid fa-server" style="color: #a855f7;"></i> Configuração de Ativos & Cisco IOS</div>
         </div>
       </div>
 
@@ -1846,6 +1886,88 @@
           </div>
         </div>
 
+        <!-- Card 3: Networking Basics -->
+        <div class="cisco-card cisco-indigo">
+          <div class="cisco-header">
+            <div class="cisco-badge-img-wrap" onclick="openCredentialModal('netbasics', 'badge')" title="Clique para ampliar a Badge Oficial">
+              <img src="assets/badges/cisco-networking-basics.png" alt="Badge Oficial Cisco Networking Basics" class="cisco-badge-img" />
+            </div>
+            <div class="cisco-meta-wrap">
+              <span class="cisco-tag indigo"><i class="fa-solid fa-certificate"></i> Credencial Oficial Verificada</span>
+              <div class="cisco-title">Networking Basics</div>
+              <div class="cisco-issuer">
+                <span><i class="fa-solid fa-building-columns"></i> Cisco Networking Academy</span>
+                <span>•</span>
+                <span>Outubro de 2026</span>
+              </div>
+            </div>
+          </div>
+          <p class="cisco-desc">
+            Credencial oficial comprovando proficiência em conceitos e topologias de comunicação de redes, arquitetura e padrões de protocolos, operação de redes Ethernet, endereçamento IPv4 e IPv6, roteamento e conectividade entre redes, testes e solução de problemas de rede e configuração segura de roteadores sem fio.
+          </p>
+          <div class="cisco-skills">
+            <span class="cisco-skill-pill">Arquitetura de Redes</span>
+            <span class="cisco-skill-pill">Protocolos de Comunicação</span>
+            <span class="cisco-skill-pill">Ethernet & Comutação</span>
+            <span class="cisco-skill-pill">Endereçamento IPv4 & IPv6</span>
+            <span class="cisco-skill-pill">Roteamento & Conectividade</span>
+            <span class="cisco-skill-pill">Troubleshooting de Redes</span>
+            <span class="cisco-skill-pill">Roteadores Sem Fio & Wi-Fi</span>
+          </div>
+          <div class="cisco-actions">
+            <button type="button" class="btn-cred btn-cred-primary" onclick="openCredentialModal('netbasics', 'cert')">
+              <i class="fa-solid fa-file-lines"></i> Visualizar Certificado
+            </button>
+            <button type="button" class="btn-cred btn-cred-secondary" onclick="openCredentialModal('netbasics', 'badge')">
+              <i class="fa-solid fa-shield-halved"></i> Badge Oficial
+            </button>
+            <a href="assets/certificates/cisco-networking-basics.pdf" target="_blank" rel="noopener" class="btn-cred btn-cred-ghost" title="Abrir PDF original em nova aba">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Networking Devices and Basic Configuration -->
+        <div class="cisco-card cisco-purple">
+          <div class="cisco-header">
+            <div class="cisco-badge-img-wrap" onclick="openCredentialModal('netdevices', 'badge')" title="Clique para ampliar a Badge Oficial">
+              <img src="assets/badges/cisco-networking-devices-and-initial-configuration.png" alt="Badge Oficial Cisco Networking Devices and Basic Configuration" class="cisco-badge-img" />
+            </div>
+            <div class="cisco-meta-wrap">
+              <span class="cisco-tag purple"><i class="fa-solid fa-certificate"></i> Credencial Oficial Verificada</span>
+              <div class="cisco-title">Networking Devices and Basic Configuration</div>
+              <div class="cisco-issuer">
+                <span><i class="fa-solid fa-building-columns"></i> Cisco Networking Academy</span>
+                <span>•</span>
+                <span>Outubro de 2026</span>
+              </div>
+            </div>
+          </div>
+          <p class="cisco-desc">
+            Credencial oficial certificando capacidade prática na construção e configuração de redes locais utilizando dispositivos Cisco via Cisco IOS, design hierárquico, conversão numérica, comutação de pacotes em switches, cálculo e divisão de sub-redes IPv4 (subnetting), protocolos ARP, serviços DNS/DHCP e camada de transporte (TCP/UDP).
+          </p>
+          <div class="cisco-skills">
+            <span class="cisco-skill-pill">Cisco IOS CLI</span>
+            <span class="cisco-skill-pill">Subnetting IPv4 & Segmentação</span>
+            <span class="cisco-skill-pill">Switches & Comutação Ethernet</span>
+            <span class="cisco-skill-pill">Design Hierárquico de Redes</span>
+            <span class="cisco-skill-pill">Serviços DNS & DHCP</span>
+            <span class="cisco-skill-pill">Protocolos TCP & UDP</span>
+            <span class="cisco-skill-pill">Resolução ARP</span>
+          </div>
+          <div class="cisco-actions">
+            <button type="button" class="btn-cred btn-cred-primary" onclick="openCredentialModal('netdevices', 'cert')">
+              <i class="fa-solid fa-file-lines"></i> Visualizar Certificado
+            </button>
+            <button type="button" class="btn-cred btn-cred-secondary" onclick="openCredentialModal('netdevices', 'badge')">
+              <i class="fa-solid fa-shield-halved"></i> Badge Oficial
+            </button>
+            <a href="assets/certificates/cisco-networking-devices-and-initial-configuration.pdf" target="_blank" rel="noopener" class="btn-cred btn-cred-ghost" title="Abrir PDF original em nova aba">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+          </div>
+        </div>
+
       </div>
 
       <h3 class="subsection-title"><i class="fa-solid fa-graduation-cap"></i> Cursos Complementares & Especializações</h3>
@@ -1859,6 +1981,20 @@
               <span>Udemy (Ligency & Ed Donner)</span>
               <span>•</span>
               <span class="course-badge">33,5h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-robot"></i></div>
+          <div class="course-info">
+            <div class="course-title">AI Engineer Production Track: Deploy LLMs & Agents at Scale</div>
+            <div class="course-meta">
+              <span>Udemy (Ligency & Ed Donner)</span>
+              <span>•</span>
+              <span class="course-badge">18,5h</span>
               <span>•</span>
               <span>2026</span>
             </div>
@@ -1985,6 +2121,34 @@
               <span>Udemy</span>
               <span>•</span>
               <span class="course-badge">24,5h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-shield-cat"></i></div>
+          <div class="course-info">
+            <div class="course-title">Google SecOps Foundation</div>
+            <div class="course-meta">
+              <span>Arki1 (Paulo Breviglieri)</span>
+              <span>•</span>
+              <span class="course-badge">2h</span>
+              <span>•</span>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-atom"></i></div>
+          <div class="course-info">
+            <div class="course-title">Introdução à Computação Quântica</div>
+            <div class="course-meta">
+              <span>UTFPR (CACOMP-MD & DACOM-MD)</span>
+              <span>•</span>
+              <span class="course-badge">8h</span>
               <span>•</span>
               <span>2026</span>
             </div>
@@ -2175,6 +2339,32 @@
         pdfDownloadName: 'Certificado_Cisco_Introduction_to_Cybersecurity_Henrique_Triches.pdf',
         badgeTitle: 'Cisco Verified Badge: Introduction to Cybersecurity',
         badgeDesc: 'Credencial emitida oficialmente pela Cisco Networking Academy atestando compreensão sólida sobre os fundamentos de segurança cibernética, identificação de vetores de ataques, malwares, privacidade online, proteção de infraestruturas organizacionais e salvaguarda de dados operacionais.'
+      },
+      netbasics: {
+        category: 'Cisco Networking Academy • Credencial Verificada',
+        categoryClass: 'indigo',
+        title: 'Networking Basics',
+        issueDate: '14 de Outubro de 2026',
+        issuer: 'Lynn Bloomer — Diretora, Cisco Networking Academy',
+        badgeImg: 'assets/badges/cisco-networking-basics.png',
+        certImg: 'assets/certificates/cisco-networking-basics-preview.png',
+        pdfUrl: 'assets/certificates/cisco-networking-basics.pdf',
+        pdfDownloadName: 'Certificado_Cisco_Networking_Basics_Henrique_Triches.pdf',
+        badgeTitle: 'Cisco Verified Badge: Networking Basics',
+        badgeDesc: 'Credencial emitida oficialmente pela Cisco Networking Academy certificando domínio em conceitos e topologias de comunicação de rede, modelos e protocolos de internet, operação de redes Ethernet, esquemas de endereçamento IPv4 e IPv6, roteamento e conectividade, ferramentas de testes de rede e configuração segura de roteadores sem fio.'
+      },
+      netdevices: {
+        category: 'Cisco Networking Academy • Credencial Verificada',
+        categoryClass: 'purple',
+        title: 'Networking Devices and Basic Configuration',
+        issueDate: '16 de Outubro de 2026',
+        issuer: 'Lynn Bloomer — Diretora, Cisco Networking Academy',
+        badgeImg: 'assets/badges/cisco-networking-devices-and-initial-configuration.png',
+        certImg: 'assets/certificates/cisco-networking-devices-and-initial-configuration-preview.png',
+        pdfUrl: 'assets/certificates/cisco-networking-devices-and-initial-configuration.pdf',
+        pdfDownloadName: 'Certificado_Cisco_Networking_Devices_Configuration_Henrique_Triches.pdf',
+        badgeTitle: 'Cisco Verified Badge: Networking Devices & Initial Configuration',
+        badgeDesc: 'Credencial emitida oficialmente pela Cisco Networking Academy comprovando competência em arquitetura de rede hierárquica, sistemas numéricos para computação em redes (decimal, binário e hexadecimal), comutação Ethernet em switches corporativos, segmentação de redes via sub-redes IPv4 (subnetting), serviços essenciais (ARP, DNS, DHCP), protocolos de transporte e configuração de ativos de rede via Cisco IOS.'
       }
     };
 
