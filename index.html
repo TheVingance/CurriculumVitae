@@ -825,6 +825,14 @@
       background: linear-gradient(90deg, #7c3aed, #a855f7);
     }
 
+    .cisco-card.cisco-gold::before {
+      background: linear-gradient(90deg, #d97706, #fbbf24);
+    }
+
+    .cisco-card.cisco-rose::before {
+      background: linear-gradient(90deg, #e11d48, #fb7185);
+    }
+
     .cisco-card:hover {
       transform: translateY(-3px);
       background: var(--surface-hover);
@@ -848,6 +856,16 @@
     .cisco-card.cisco-purple:hover {
       border-color: rgba(168, 85, 247, 0.5);
       box-shadow: 0 12px 28px -6px rgba(168, 85, 247, 0.2);
+    }
+
+    .cisco-card.cisco-gold:hover {
+      border-color: rgba(245, 158, 11, 0.5);
+      box-shadow: 0 12px 28px -6px rgba(245, 158, 11, 0.25);
+    }
+
+    .cisco-card.cisco-rose:hover {
+      border-color: rgba(225, 29, 72, 0.5);
+      box-shadow: 0 12px 28px -6px rgba(225, 29, 72, 0.2);
     }
 
     .cisco-header {
@@ -920,12 +938,32 @@
       border: 1px solid rgba(168, 85, 247, 0.3);
     }
 
+    .cisco-tag.gold {
+      background: rgba(245, 158, 11, 0.12);
+      color: #b45309;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+
+    .cisco-tag.rose {
+      background: rgba(225, 29, 72, 0.12);
+      color: #e11d48;
+      border: 1px solid rgba(225, 29, 72, 0.3);
+    }
+
     [data-theme="dark"] .cisco-tag.indigo {
       color: #a5b4fc;
     }
 
     [data-theme="dark"] .cisco-tag.purple {
       color: #d8b4fe;
+    }
+
+    [data-theme="dark"] .cisco-tag.gold {
+      color: #fcd34d;
+    }
+
+    [data-theme="dark"] .cisco-tag.rose {
+      color: #fda4af;
     }
 
     .cisco-title {
@@ -1599,6 +1637,8 @@
           <div class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #34d399;"></i> Cibersegurança & Redes (Cisco)</div>
           <div class="skill-badge"><i class="fa-solid fa-route" style="color: #6366f1;"></i> Networking Basics & Protocolos (Cisco)</div>
           <div class="skill-badge"><i class="fa-solid fa-server" style="color: #a855f7;"></i> Configuração de Ativos & Cisco IOS</div>
+          <div class="skill-badge"><i class="fa-solid fa-user-shield" style="color: #fbbf24;"></i> Junior Cybersecurity Analyst (Cisco)</div>
+          <div class="skill-badge"><i class="fa-solid fa-laptop-medical" style="color: #f43f5e;"></i> Endpoint Security & Malware PCAP (Cisco)</div>
         </div>
       </div>
 
@@ -1807,7 +1847,47 @@
       <!-- CREDENCIAIS OFICIAIS CISCO & BADGES VERIFICADAS -->
       <div class="cisco-showcase">
 
-        <!-- Card 1: Cyber Threat Management -->
+        <!-- Card 1: Junior Cybersecurity Analyst Career Path -->
+        <div class="cisco-card cisco-gold">
+          <div class="cisco-header">
+            <div class="cisco-badge-img-wrap" onclick="openCredentialModal('junioranalyst', 'badge')" title="Clique para ampliar a Badge Oficial">
+              <img src="assets/badges/cisco-junior-cybersecurity-analyst.png" alt="Badge Oficial Cisco Junior Cybersecurity Analyst Career Path" class="cisco-badge-img" />
+            </div>
+            <div class="cisco-meta-wrap">
+              <span class="cisco-tag gold"><i class="fa-solid fa-star"></i> Career Path Oficial Verificado</span>
+              <div class="cisco-title">Junior Cybersecurity Analyst</div>
+              <div class="cisco-issuer">
+                <span><i class="fa-solid fa-building-columns"></i> Cisco Networking Academy</span>
+                <span>•</span>
+                <span>Outubro de 2026</span>
+              </div>
+            </div>
+          </div>
+          <p class="cisco-desc">
+            Trilha de carreira profissional oficial consolidando competências completas em defesa cibernética: recomendação e governança de controles de segurança, mitigação de ameaças contra redes e sistemas, avaliação da postura de segurança corporativa via análise de riscos e vulnerabilidades e gestão de planos de resposta a incidentes.
+          </p>
+          <div class="cisco-skills">
+            <span class="cisco-skill-pill">Cybersecurity Controls</span>
+            <span class="cisco-skill-pill">Threat Mitigation</span>
+            <span class="cisco-skill-pill">Posture Assessment</span>
+            <span class="cisco-skill-pill">Incident Management</span>
+            <span class="cisco-skill-pill">Network Defense</span>
+            <span class="cisco-skill-pill">Risk & Vulnerability</span>
+          </div>
+          <div class="cisco-actions">
+            <button type="button" class="btn-cred btn-cred-primary" onclick="openCredentialModal('junioranalyst', 'cert')">
+              <i class="fa-solid fa-file-lines"></i> Visualizar Certificado
+            </button>
+            <button type="button" class="btn-cred btn-cred-secondary" onclick="openCredentialModal('junioranalyst', 'badge')">
+              <i class="fa-solid fa-shield-halved"></i> Badge Oficial
+            </button>
+            <a href="assets/certificates/cisco-junior-cybersecurity-analyst.pdf" target="_blank" rel="noopener" class="btn-cred btn-cred-ghost" title="Abrir PDF original em nova aba">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Cyber Threat Management -->
         <div class="cisco-card cisco-blue">
           <div class="cisco-header">
             <div class="cisco-badge-img-wrap" onclick="openCredentialModal('threat', 'badge')" title="Clique para ampliar a Badge Oficial">
@@ -1847,7 +1927,47 @@
           </div>
         </div>
 
-        <!-- Card 2: Introduction to Cybersecurity -->
+        <!-- Card 3: Endpoint Security -->
+        <div class="cisco-card cisco-rose">
+          <div class="cisco-header">
+            <div class="cisco-badge-img-wrap" onclick="openCredentialModal('endpointsec', 'badge')" title="Clique para ampliar a Badge Oficial">
+              <img src="assets/badges/cisco-endpoint-security.png" alt="Badge Oficial Cisco Endpoint Security" class="cisco-badge-img" />
+            </div>
+            <div class="cisco-meta-wrap">
+              <span class="cisco-tag rose"><i class="fa-solid fa-certificate"></i> Credencial Oficial Verificada</span>
+              <div class="cisco-title">Endpoint Security</div>
+              <div class="cisco-issuer">
+                <span><i class="fa-solid fa-building-columns"></i> Cisco Networking Academy</span>
+                <span>•</span>
+                <span>Outubro de 2026</span>
+              </div>
+            </div>
+          </div>
+          <p class="cisco-desc">
+            Credencial oficial comprovando proficiência técnica na mitigação de ameaças emergentes de rede, configuração de arquiteturas de rede seguras, análise e investigação de arquivos maliciosos (malware) extraídos de capturas de pacotes (PCAP) e avaliação rigorosa da integridade e proteção de endpoints.
+          </p>
+          <div class="cisco-skills">
+            <span class="cisco-skill-pill">Endpoint Defense</span>
+            <span class="cisco-skill-pill">Análise de Malware</span>
+            <span class="cisco-skill-pill">Packet Captures (PCAP)</span>
+            <span class="cisco-skill-pill">Mitigação de Ameaças</span>
+            <span class="cisco-skill-pill">Network Hardening</span>
+            <span class="cisco-skill-pill">Security Evaluation</span>
+          </div>
+          <div class="cisco-actions">
+            <button type="button" class="btn-cred btn-cred-primary" onclick="openCredentialModal('endpointsec', 'cert')">
+              <i class="fa-solid fa-file-lines"></i> Visualizar Certificado
+            </button>
+            <button type="button" class="btn-cred btn-cred-secondary" onclick="openCredentialModal('endpointsec', 'badge')">
+              <i class="fa-solid fa-shield-halved"></i> Badge Oficial
+            </button>
+            <a href="assets/certificates/cisco-endpoint-security.pdf" target="_blank" rel="noopener" class="btn-cred btn-cred-ghost" title="Abrir PDF original em nova aba">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Introduction to Cybersecurity -->
         <div class="cisco-card cisco-green">
           <div class="cisco-header">
             <div class="cisco-badge-img-wrap" onclick="openCredentialModal('cyberintro', 'badge')" title="Clique para ampliar a Badge Oficial">
@@ -2365,6 +2485,32 @@
         pdfDownloadName: 'Certificado_Cisco_Networking_Devices_Configuration_Henrique_Triches.pdf',
         badgeTitle: 'Cisco Verified Badge: Networking Devices & Initial Configuration',
         badgeDesc: 'Credencial emitida oficialmente pela Cisco Networking Academy comprovando competência em arquitetura de rede hierárquica, sistemas numéricos para computação em redes (decimal, binário e hexadecimal), comutação Ethernet em switches corporativos, segmentação de redes via sub-redes IPv4 (subnetting), serviços essenciais (ARP, DNS, DHCP), protocolos de transporte e configuração de ativos de rede via Cisco IOS.'
+      },
+      junioranalyst: {
+        category: 'Cisco Networking Academy • Career Path Oficial',
+        categoryClass: 'gold',
+        title: 'Junior Cybersecurity Analyst Career Path',
+        issueDate: '18 de Outubro de 2026',
+        issuer: 'Lynn Bloomer — Diretora, Cisco Networking Academy',
+        badgeImg: 'assets/badges/cisco-junior-cybersecurity-analyst.png',
+        certImg: 'assets/certificates/cisco-junior-cybersecurity-analyst-preview.png',
+        pdfUrl: 'assets/certificates/cisco-junior-cybersecurity-analyst.pdf',
+        pdfDownloadName: 'Certificado_Cisco_Junior_Cybersecurity_Analyst_Henrique_Triches.pdf',
+        badgeTitle: 'Cisco Career Path Badge: Junior Cybersecurity Analyst',
+        badgeDesc: 'Credencial oficial de Trilha de Carreira emitida pela Cisco Networking Academy reconhecendo formação profissional completa e domínio abrangente em cibersegurança: governança e recomendação de controles de segurança para redes e dados, mitigação ativa de ameaças e ataques, avaliação de postura de segurança institucional via ferramentas de vulnerabilidade e risco, formulação de planos de resposta a incidentes e atuação qualificada como Analista de Segurança.'
+      },
+      endpointsec: {
+        category: 'Cisco Networking Academy • Credencial Verificada',
+        categoryClass: 'rose',
+        title: 'Endpoint Security',
+        issueDate: '17 de Outubro de 2026',
+        issuer: 'Lynn Bloomer — Diretora, Cisco Networking Academy',
+        badgeImg: 'assets/badges/cisco-endpoint-security.png',
+        certImg: 'assets/certificates/cisco-endpoint-security-preview.png',
+        pdfUrl: 'assets/certificates/cisco-endpoint-security.pdf',
+        pdfDownloadName: 'Certificado_Cisco_Endpoint_Security_Henrique_Triches.pdf',
+        badgeTitle: 'Cisco Verified Badge: Endpoint Security',
+        badgeDesc: 'Credencial emitida oficialmente pela Cisco Networking Academy atestando competência técnica em proteção e desafios de dados corporativos, mitigação de ameaças emergentes de rede, configuração de redes simuladas segundo requisitos organizacionais, análise técnica e comportamental de malwares a partir de capturas de pacotes (PCAP) e avaliação de integridade e segurança de endpoints.'
       }
     };
 

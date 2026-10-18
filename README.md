@@ -58,7 +58,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 | **Linguagens & Frameworks** | Python, FastAPI, Node.js, TypeScript, Java (POO), C#, JavaScript |
 | **Front-end** | React, HTML5, CSS3 Moderno, Design Responsivo |
 | **Engenharia & Arquitetura** | Clean Architecture, Domain-Driven Design (DDD), APIs RESTful, Reverse Proxy |
-| **Segurança & Inteligência Artificial** | AI Firewall (LLM Gateway), LLM Engineering, RAG & Agents, Pesquisa em Segurança de LLMs, Detecção de Prompt Injection, OWASP Top 10 for LLMs, Threat Management & Vulnerability Assessment (Cisco), Ethical Hacking, Cibersegurança |
+| **Segurança & Inteligência Artificial** | Junior Cybersecurity Analyst (Cisco Career Path), Threat Management & Vulnerability Assessment (Cisco), Endpoint Security & Malware PCAP (Cisco), AI Firewall (LLM Gateway), LLM Engineering, RAG & Agents, Pesquisa em Segurança de LLMs, Detecção de Prompt Injection, OWASP Top 10 for LLMs, Ethical Hacking, Cibersegurança Defensiva |
 | **Sistemas & Ferramentas** | Docker & Docker Compose, Git, GitHub, Versionamento de Código, Telemetria & Automação Industrial, Redes de Computadores, Cisco IOS & Ativos de Rede |
 
 ---
@@ -103,6 +103,15 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 <table>
   <tr>
     <td align="center" width="50%">
+      <a href="assets/certificates/cisco-junior-cybersecurity-analyst.pdf" target="_blank">
+        <img src="assets/badges/cisco-junior-cybersecurity-analyst.png" width="140" alt="Cisco Verified Badge - Junior Cybersecurity Analyst Career Path"><br/>
+        <strong>Junior Cybersecurity Analyst</strong>
+      </a><br/>
+      <sub>Cisco Networking Academy • <strong>Career Path Oficial</strong> • Outubro de 2026</sub><br/>
+      <small>🌟 Trilha Profissional Completa: Governança, Controles de Cibersegurança, Mitigação & Resposta a Incidentes</small><br/>
+      <a href="assets/certificates/cisco-junior-cybersecurity-analyst.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
+    </td>
+    <td align="center" width="50%">
       <a href="assets/certificates/cisco-cyber-threat-management.pdf" target="_blank">
         <img src="assets/badges/cisco-cyber-threat-management.png" width="140" alt="Cisco Verified Badge - Cyber Threat Management"><br/>
         <strong>Cyber Threat Management</strong>
@@ -110,6 +119,17 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
       <sub>Cisco Networking Academy • Emitido em 14 de Outubro de 2026</sub><br/>
       <small>🔒 Avaliação de Vulnerabilidades, Planos de Gestão de Riscos, Resposta a Incidentes & Forense</small><br/>
       <a href="assets/certificates/cisco-cyber-threat-management.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="assets/certificates/cisco-endpoint-security.pdf" target="_blank">
+        <img src="assets/badges/cisco-endpoint-security.png" width="140" alt="Cisco Verified Badge - Endpoint Security"><br/>
+        <strong>Endpoint Security</strong>
+      </a><br/>
+      <sub>Cisco Networking Academy • Emitido em 17 de Outubro de 2026</sub><br/>
+      <small>🛡️ Proteção de Endpoints, Análise Comportamental de Malwares & Investigação em Capturas (PCAP)</small><br/>
+      <a href="assets/certificates/cisco-endpoint-security.pdf">📄 <i>Visualizar Certificado Oficial (PDF)</i></a>
     </td>
     <td align="center" width="50%">
       <a href="assets/certificates/cisco-introduction-to-cybersecurity.pdf" target="_blank">
@@ -147,7 +167,9 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 
 ## 📜 Cursos & Certificações
 
+- **Junior Cybersecurity Analyst Career Path** — Cisco Networking Academy • Trilha de Carreira Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-junior-cybersecurity-analyst.pdf)]
 - **Cyber Threat Management** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-cyber-threat-management.pdf)]
+- **Endpoint Security** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-endpoint-security.pdf)]
 - **Introduction to Cybersecurity** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-introduction-to-cybersecurity.pdf)]
 - **Networking Basics** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-networking-basics.pdf)]
 - **Networking Devices and Basic Configuration** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-networking-devices-and-initial-configuration.pdf)]
