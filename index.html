@@ -777,6 +777,33 @@
       border: 1px solid var(--card-border);
     }
 
+    .course-cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      padding: 0.1rem 0.5rem;
+      border-radius: 4px;
+      background: rgba(2, 132, 199, 0.08);
+      border: 1px solid rgba(2, 132, 199, 0.25);
+      transition: all var(--transition-speed);
+    }
+
+    [data-theme="dark"] .course-cert-link {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.25);
+    }
+
+    .course-cert-link:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
     /* CREDENCIAIS VERIFICADAS CISCO & BADGES */
     .cisco-showcase {
       display: grid;
@@ -2117,6 +2144,24 @@
               <span class="course-badge">18,5h</span>
               <span>•</span>
               <span>2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-icon"><i class="fa-solid fa-database"></i></div>
+          <div class="course-info">
+            <div class="course-title">Administrador de Banco de Dados</div>
+            <div class="course-meta">
+              <span>IFRS (Inst. Federal do RS)</span>
+              <span>•</span>
+              <span class="course-badge">200h</span>
+              <span>•</span>
+              <span>2026</span>
+              <span>•</span>
+              <a href="assets/certificates/ifrs-administrador-de-banco-de-dados.pdf" target="_blank" rel="noopener" class="course-cert-link" title="Visualizar Certificado em PDF">
+                <i class="fa-solid fa-file-pdf"></i> Certificado
+              </a>
             </div>
           </div>
         </div>

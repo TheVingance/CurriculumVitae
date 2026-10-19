@@ -175,6 +175,7 @@ Paralelamente, curso **Bacharelado em Ciência da Computação na UTFPR**, com h
 - **Networking Devices and Basic Configuration** — Cisco Networking Academy • Credencial Verificada Oficial (Out/2026) [📄 [Certificado PDF](assets/certificates/cisco-networking-devices-and-initial-configuration.pdf)]
 - **AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents** — Udemy (Ligency & Ed Donner) • 33,5h
 - **AI Engineer Production Track: Deploy LLMs & Agents at Scale** — Udemy (Ligency & Ed Donner) • 18,5h
+- **Administrador de Banco de Dados** — IFRS (Inst. Federal do Rio Grande do Sul) • 200h [📄 [Certificado PDF](assets/certificates/ifrs-administrador-de-banco-de-dados.pdf)]
 - **Banco de Dados: Oracle PL/SQL** — IFRS (Inst. Federal do Rio Grande do Sul) • 20h
 - **Workshop Oracle APEX – Sales Hub & ORDS** — Frimesa Cooperativa Central • 8h
 - **Básico – Formação em Cibersegurança** — Hackers do Bem / SENAI SP • 64h
